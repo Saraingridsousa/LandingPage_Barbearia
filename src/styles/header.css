@@ -1,0 +1,15 @@
+#navbar{
+    background-color: #363636;
+    align-items: center;
+    display: flex;  
+}
+
+#nav_list {
+   
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    
+}
+
+
