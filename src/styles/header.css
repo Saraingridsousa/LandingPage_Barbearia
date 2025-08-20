@@ -1,19 +1,25 @@
-body{
-    background-color: grey;
-}
-
 .medievalsharp-regular {
   font-family: "MedievalSharp", cursive;
   font-weight: 400;
   font-style: normal;
 }
-.header{
-    padding-inline: 50px;
-    background-color: #363636;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
+
+header{
+    padding-inline: 30px;
+    background-color: #363636;
+    font-family: "MedievalSharp", cursive;
+}
+
 #navbar{
-    max-width: 1280px;
+    width: 100%;
     margin-inline: auto;
+    min-height: 60px;
     align-items: center;
     display: flex;  
     justify-content: space-between;
@@ -21,25 +27,62 @@ body{
 
 
 #nav_list {
-    font-family: "MedievalSharp", cursive;
     display: flex;
-    gap: 32px;
+    gap: 48px;
     list-style: none;
 }
 
- a {
-    font-size:18px;
+.nav-item a {
+    font-size:20px;
     text-decoration: none;
     color: white;
     padding-block: 16px;
+    &:hover {
+        color: #FFB430;
+    }
 }
 
-#btn_nav{
+.btn_nav{
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:#FFB430;
-    color: black;
-    border-radius: 10px;
-    padding: 5px 15px;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.1);
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    
 }
 
+.btn_nav:hover{
+    background-color: #FBCA73;
+}
 
+#btn_mobile{
+    display: none;
+}
+
+#mobile_menu{
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn_nav{
+        display: none;
+    }
+
+   #btn_mobile{
+       display: block;
+       border: none;
+       background-color: transparent;
+       font-size: 2.0rem;
+       color:#FFB430;
+       cursor: pointer;
+   }
+}
