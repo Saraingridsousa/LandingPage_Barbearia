@@ -85,4 +85,23 @@ header{
        color:#FFB430;
        cursor: pointer;
    }
+
+   #mobile_menu.active {
+       display: block;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   #mobile_nav_list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 5px;
+   }
+
+   #mobile_nav_list .nav-item{
+        list-style: none;
+        text-align: center;
+   }
+
 }
