@@ -1,8 +1,11 @@
-.medievalsharp-regular {
-  font-family: "MedievalSharp", cursive;
-  font-weight: 400;
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
 }
+
 
 *{
     margin:0;
@@ -13,7 +16,8 @@
 header{
     padding-inline: 30px;
     background-color: #363636;
-    font-family: "MedievalSharp", cursive;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 }
 
 #navbar{
@@ -42,6 +46,15 @@ header{
     }
 }
 
+.logo_nav{
+    
+    img {
+        max-width: 42%;
+        margin:2px;
+        cursor: pointer;
+    }
+}
+
 .btn_nav{
     border:none;
     display: flex;
@@ -54,10 +67,30 @@ header{
     box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.1);
     text-decoration: none;
     color:black;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.btn_nav_mobile{
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#FFB430;
+    cursor: pointer;
+    font-size: 1.0rem;
+    border-radius: 10px;
+    padding: 10px 2px;
+    box-shadow: 0px 0px 10px 2px rgb(0,0,0,0.1);
+    text-decoration: none;
+    color:black;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    
+    font-family: "Montserrat", sans-serif;
 }
+
 
 .btn_nav:hover{
     background-color: #FBCA73;
@@ -104,4 +137,9 @@ header{
         text-align: center;
    }
 
+   .logo_nav{
+        img {
+            max-width: 30%;
+        }
+    }
 }
