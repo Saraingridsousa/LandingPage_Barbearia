@@ -23,3 +23,11 @@ section{
     transform: scale(1.1);
 }
 
+h2{
+    color: #FFB430;
+    font-family: "MedievalSharp", cursive;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 3rem;
+    text-align: center;
+}
