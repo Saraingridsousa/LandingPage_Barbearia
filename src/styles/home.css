@@ -9,19 +9,20 @@
   background-color: black;
   display: flex;
   min-height: 20px;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding-right: 0px;
+  align-items: center;
 }
 
 #cta{
-  width: 50%;
+  width: 0%
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
 }
 
 #cta .title{
   font-family: "Montserrat", sans-serif;
-  font-size: 6rem;
+  font-size: 5rem;
   color: white;
   padding-bottom: 0px;
 }
@@ -37,5 +38,4 @@
   font-family: "Montserrat", sans-serif;
   padding-bottom: 40px;
 }
-
 

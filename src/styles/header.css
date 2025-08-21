@@ -42,6 +42,7 @@ header{
     padding-block: 16px;
     &:hover {
         color: #FFB430;
+        transform: scale(1.1);
     }
 }
 
@@ -93,6 +94,8 @@ header{
 
 .btn_nav:hover{
     background-color: #FBCA73;
+    transform: scale(1.1);
+    color:#363636;
 }
 
 #btn_mobile{
