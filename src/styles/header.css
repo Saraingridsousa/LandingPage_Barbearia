@@ -71,6 +71,7 @@ header{
     font-size: 16px;
     transition: background-color 0.3s ease;
     font-family: "Montserrat", sans-serif;    
+    border: 3px solid black;
 }
 
 .btn_nav_mobile{
@@ -96,6 +97,7 @@ header{
     background-color: #FBCA73;
     transform: scale(1.1);
     color:#363636;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 #btn_mobile{

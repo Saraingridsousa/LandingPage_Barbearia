@@ -1,0 +1,17 @@
+.medievalsharp-regular {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#sobre{
+    background-color: grey;
+}
+
+
+h2{
+    color: #FFB430;
+    font-family: "MedievalSharp", cursive;
+    padding-top: 20px;
+    font-size: 3rem;
+}
