@@ -17,29 +17,38 @@
 }
 
 #fotos{
-    width: 40%;
-    height: 450px;
-    background-color: green;
+    width: 45%;
+    height: 380px;
+    background-color:green;
     border-radius: 15px;
 
 }
 
-.info_gerais{
+#info_gerais{
     width: 50%;
-    height: 450px;
-    background-color: blue;
+    height: 400px;
+    text-align: justify;
+
+}
+#info_gerais .info_text{
+   
+    color:white;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    padding-right: 50px;
+    overflow-wrap: break-word;
 }
 
 .container_contato{
-    width: 40%;
-    height: 450px;
+    width: 45%;
+    height: 400px;
     background-color: white;
 }
 
 .mapBox{
     width: 50%;
-    height: 450px;
-    background-color: pink;
+    height: 400px;
     border-radius: 15px;
     
 }

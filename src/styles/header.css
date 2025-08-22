@@ -1,14 +1,11 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
 
 header{
     padding-inline: 30px;
     background-color: #363636;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
+    /*position: fixed;
+    z-index: 3;*/
 }
 
 #navbar{
@@ -109,6 +106,7 @@ header{
 }
 
 @media screen and (max-width: 1170px) {
+    
     #nav_list,
     #navbar .btn_nav{
         display: none;

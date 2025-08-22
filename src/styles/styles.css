@@ -1,5 +1,12 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 section{
     padding-inline: 30px;
+    
 }
 .btn_cta{
     color: #FFB430;

@@ -18,6 +18,7 @@
   width: 0%
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 #cta .title{
@@ -39,3 +40,73 @@
   padding-bottom: 40px;
 }
 
+
+#banner{
+  display: flex;
+  justify-content: end;
+  width: 60%;
+  max-width: 100%;
+  z-index: 0;
+  position: relative;
+}
+
+#banner img{
+  height: 100%;
+  width: fit-content;
+  position: relative;
+}
+
+@media screen and (max-width: 1170px) {
+
+  #home{
+  background-color: pink;
+  min-height: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+  #cta{
+    position: absolute;
+    z-index: 2;
+    justify-items: center;
+    text-align: center;
+
+  }
+
+  #cta .title{
+    font-size: 4rem;
+  }
+
+  #cta .description{
+    font-size: 1.2rem;
+  }
+
+  #banner{
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    z-index: 0;
+    position: relative;
+  }
+
+  #banner img{
+    height: 100%;
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 1170px) and (max-width: 1441px) {
+
+    #banner{
+      width: 40%;
+    }
+}
+
+@media screen and (min-width: 852px) and (max-width: 1150px) {
+
+  #cta .title{
+    font-size: 4rem;
+  }
+}
