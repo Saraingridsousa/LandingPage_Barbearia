@@ -6,26 +6,39 @@
 
 
 #home{
-  background-color: black;
+  background-color: #000;
   display: flex;
-  min-height: 20px;
-  justify-content: space-between;
-  padding-right: 0px;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 60px 30px;
+  min-height: 60vh;
+  flex-wrap: wrap;
 }
 
 #cta{
-  width: 0%
+  flex: 1 1 420px; 
   display: flex;
   flex-direction: column;
   z-index: 2;
+  max-width: 650px;
 }
+
+#home{ position: relative; }
+
+#cta{
+  background: rgba(0,0,0,0.12);
+  padding: 18px 22px;
+  border-radius: 12px;
+}
+
+#cta .title, #cta .description { text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
 
 #cta .title{
   font-family: "Montserrat", sans-serif;
-  font-size: 5rem;
+  font-size: clamp(2.2rem, 6vw, 5rem);
   color: white;
-  padding-bottom: 0px;
+  line-height: 1.02;
 }
 
 #cta .title span{
@@ -34,79 +47,104 @@
 }
 
 #cta .description{
-  color:white;
-  font-size: 1.2rem;
+  color: #fff;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   font-family: "Montserrat", sans-serif;
-  padding-bottom: 40px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-
-#banner{
+.cta_button{
   display: flex;
-  justify-content: end;
-  width: 60%;
-  max-width: 100%;
-  z-index: 0;
-  position: relative;
+  gap: 1rem;
 }
 
+/* Banner: make image fill the banner area to avoid black gaps */
+#banner{
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 700px;
+  z-index: 0;
+}
+
+/* Ensure image covers the banner area without leaving black spaces */
 #banner img{
-  height: 100%;
-  width: fit-content;
-  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 @media screen and (max-width: 1170px) {
-
   #home{
-  background-color: pink;
-  min-height: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
+    padding: 50px 24px;
+    justify-content: center;
+    min-height: auto;
+  }
 
   #cta{
-    position: absolute;
-    z-index: 2;
-    justify-items: center;
+    order: 1;
     text-align: center;
-
+    align-items: center;
+    max-width: 800px;
   }
 
   #cta .title{
-    font-size: 4rem;
-  }
-
-  #cta .description{
-    font-size: 1.2rem;
+    font-size: clamp(2rem, 7vw, 4rem);
   }
 
   #banner{
-    justify-content: center;
+    order: 2;
     width: 100%;
-    max-width: 100%;
-    z-index: 0;
-    position: relative;
+    justify-content: center;
+    margin-top: 1.5rem;
   }
 
   #banner img{
-    height: 100%;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #cta{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(var(--header-height, 70px) + 16px);
+    z-index: 2;
+    width: min(92%, 720px);
+    padding: 20px;
+    background: rgba(0,0,0,0.45);
+  }
+
+  #banner{
+    order: 2;
     width: 100%;
   }
 
+  #banner img{ width: 100%; }
 }
 
-@media screen and (min-width: 1170px) and (max-width: 1441px) {
-
-    #banner{
-      width: 40%;
-    }
+@media screen and (min-width: 901px) {
+  #cta{ margin-right: -10%; }
 }
 
-@media screen and (min-width: 852px) and (max-width: 1150px) {
+@media screen and (max-width: 480px) {
+  #home{
+    padding: 36px 16px;
+  }
 
   #cta .title{
-    font-size: 4rem;
+    font-size: clamp(1.6rem, 9vw, 2.6rem);
+  }
+
+  #cta .description{
+    font-size: 0.95rem;
+  }
+
+  #banner img{
+    width: 100%;
   }
 }
