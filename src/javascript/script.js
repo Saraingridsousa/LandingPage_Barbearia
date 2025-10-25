@@ -2,6 +2,11 @@ $(document).ready(function() {
     $('#btn_mobile').on('click', function() {
         $('#mobile_menu').toggleClass('active');
     });
+    // Close mobile menu when a link inside it is clicked (so it collapses after navigation)
+    $('#mobile_menu').on('click', 'a', function(){
+        // small delay to allow anchor navigation to start
+        setTimeout(function(){ $('#mobile_menu').removeClass('active'); }, 50);
+    });
 
 
     (function(){
