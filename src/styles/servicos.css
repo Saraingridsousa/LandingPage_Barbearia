@@ -1,0 +1,82 @@
+.servicos-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+	align-items: stretch;
+	padding: 20px 30px 60px;
+	max-width: 1200px;
+	margin: 0 auto 40px;
+}
+
+.service-card{
+	background: #C2872A;
+	color: #111;
+	border-radius: 14px;
+	padding: 22px 16px; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	min-height: 260px;
+}
+
+.service-card:hover{
+	transform: translateY(-8px);
+	box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+}
+
+.service-icon{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 12px;
+	min-height: 88px;
+}
+
+.service-icon img{
+	width: 48%; 
+	height: auto;
+	object-fit: contain;
+	display: block;
+}
+
+.service-title{
+	font-family: "MedievalSharp", cursive;
+	font-size: 1.45rem;
+	color: #111;
+	margin: 8px 0 6px 0;
+}
+
+.service-desc{
+	font-family: "Montserrat", sans-serif;
+	color: rgba(17,17,17,0.9);
+	font-size: 0.95rem;
+	line-height: 1.3;
+	margin-top: 0;
+}
+
+#serviços{
+	background: #111; 
+	padding-top: 28px;
+	padding-bottom: 40px;
+}
+
+@media screen and (max-width: 768px){
+	.servicos-grid{ grid-template-columns: repeat(2, 1fr); }
+	.service-icon{ font-size: 3rem; }
+	.service-card{ padding: 20px; }
+	.servicos-grid{ gap: 18px; }
+	.service-card{ min-height: 0; }
+}
+
+@media screen and (max-width: 420px){
+	.servicos-grid{ grid-template-columns: 1fr; }
+	.service-icon{ font-size: 2.6rem; }
+	.service-title{ font-size: 1.25rem; }
+	.service-card{ min-height: 0; }
+}
+
+

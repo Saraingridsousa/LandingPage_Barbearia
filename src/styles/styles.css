@@ -30,7 +30,9 @@ section{
     transform: scale(1.1);
 }
 
-h2{
+/* Headings in MedievalSharp used for section titles */
+h2,
+.medievalsharp-regular {
     color: #FFB430;
     font-family: "MedievalSharp", cursive;
     padding-top: 20px;
