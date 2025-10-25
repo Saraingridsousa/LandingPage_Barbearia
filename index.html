@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
     <link rel="stylesheet" href="src/styles/home.css">  
     <link rel="stylesheet" href="src/styles/servicos.css">
+    <link rel="stylesheet" href="src/styles/depoismentos.css">
     <link rel="stylesheet" href="src/styles/styles.css">  
     <link rel="stylesheet" href="src/styles/sobre.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,10 +170,58 @@
         </section>
 
         <section id="depoimentos">
-            <h2>Depoimentos</h2>
+            <h2 class="medievalsharp-regular">Depoimentos</h2>
+
+            <div class="depoimentos-wrap">
+                <div class="carousel" data-interval="5000">
+                    <button class="carousel-arrow prev" aria-label="Anterior">&#10094;</button>
+
+                    <div class="carousel-track-wrapper">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 1">
+                            </li>
+
+                            <li class="carousel-slide">
+                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 2">
+                            </li>
+
+                            <li class="carousel-slide">
+                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 3">
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <button class="carousel-arrow next" aria-label="Próximo">&#10095;</button>
+                </div>
+
+                <div class="carousel-dots" aria-hidden="false"></div>
+
+                <div class="depo-cta">
+                    <button class="btn_cta">Entre em contato</button>
+                </div>
+            </div>
+
         </section>
 
-        <footer></footer>
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <img src="src/imagens/logo.png" alt="Logo JR do Corte" class="footer-logo">
+                </div>
+
+                <div class="footer-center">
+                    <h3 class="footer-title">SEU ESTILO<br><span>EM BOAS MÃOS</span></h3>
+                    <p class="footer-address">Rua Vieira Pinto, XXX<br>Centro - Lima Duarte</p>
+                </div>
+
+                <div class="footer-right">
+                    <a class="contact-pill instagram" href="https://instagram.com/josedocorte7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span>@josedocorte7</span></a>
+                    <a class="contact-pill whatsapp" href="https://wa.me/5532999827807" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span>(32) 99982-7807</span></a>
+                </div>
+            </div>
+        </footer>
 
     </main>
 

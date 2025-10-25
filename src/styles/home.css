@@ -5,7 +5,6 @@
 }
 
 
-
 #home{
   background-color: #000;
   display: flex;
@@ -60,7 +59,6 @@
   gap: 1rem;
 }
 
-/* Banner: make image fill the banner area to avoid black gaps */
 #banner{
   flex: 1 1 320px;
   display: flex;
@@ -70,7 +68,6 @@
   z-index: 0;
 }
 
-/* Ensure image covers the banner area without leaving black spaces */
 #banner img{
   width: 100%;
   height: auto;

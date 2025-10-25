@@ -24,13 +24,16 @@ section{
     border: 2px solid #FFB430;
 }
 
+.depo-cta .btn_cta{
+    margin-bottom: 24px;
+}
+
 .btn_cta:hover{
     background-color: #FBCA73;
     color:#2D1F07;
     transform: scale(1.1);
 }
 
-/* Headings in MedievalSharp used for section titles */
 h2,
 .medievalsharp-regular {
     color: #FFB430;

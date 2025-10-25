@@ -1,0 +1,134 @@
+#depoimentos{
+  background: #0b0b0b;
+}
+
+.depoimentos-wrap{
+  max-width: 1100px;
+  margin: 0 auto 0; 
+  padding: 8px 16px 0;
+  text-align: center;
+  min-height: 420px; 
+}
+
+.carousel{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel.vertical{
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carousel.vertical .carousel-track-wrapper{
+  width: 100%;
+  max-width: 680px;
+  height: 360px;
+}
+
+.carousel.vertical .carousel-track{
+  flex-direction: column;
+  gap: 18px;
+}
+
+.carousel.vertical .carousel-slide{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 320px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel.vertical .carousel-arrow{
+  background: transparent;
+  border: none;
+  color: #FFB430;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 6px 0; 
+}
+.carousel.vertical .carousel-arrow.prev{ order: 0; }
+.carousel.vertical .carousel-track-wrapper{ order: 1; }
+.carousel.vertical .carousel-arrow.next{ order: 2; }
+.carousel.vertical + .carousel-dots{ display: none; }
+
+.carousel-track-wrapper{
+  overflow: hidden;
+  width: 680px; 
+  max-width: 100%;
+  height: 420px; 
+}
+
+.carousel-track{
+  display: flex;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide{
+  min-width: 520px;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+  height: 100%; 
+}
+
+.testimonial-card{
+  background: #ffffff;
+  color: #111;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.25);
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-header{ display:flex; gap:12px; align-items:center; }
+.avatar{ width:48px; height:48px; border-radius:50%; background:#C2872A; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
+.meta .name{ font-weight:700; }
+.meta .date{ font-size:0.85rem; color:#666; }
+.rating{ color:#FFB430; margin:8px 0; }
+.excerpt{ margin: 8px 0 10px; }
+.read-more{ color:#C2872A; font-weight:600; text-decoration:none; }
+
+.carousel-arrow{ background:transparent; border:none; color:#FFB430; font-size:2rem; cursor:pointer; padding:6px 12px; }
+.carousel-arrow:focus{ outline:none; }
+
+.carousel-dots{ display:flex; gap:10px; justify-content:center; margin-top:10px; transform: translateY(-8px); }
+.carousel-dot{ width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.2); cursor:pointer; }
+.carousel-dot.active{ background:#FFB430; }
+
+.depo-cta{ margin-top:22px; display:flex; justify-content:center; }
+
+@media (max-width: 900px){
+  .carousel-slide{ min-width: 360px; max-width:360px; }
+  .carousel-track-wrapper{ width: 92%; height: 360px; }
+  .depoimentos-wrap{ min-height: 420px; }
+}
+
+@media (max-width: 520px){
+  .carousel{ gap:6px; }
+  .carousel-arrow{ font-size:1.4rem; }
+  .carousel-track-wrapper{ height: 320px; }
+  .carousel-slide{ min-width: 300px; max-width:300px; }
+  .testimonial-card{ padding:14px; }
+  .depoimentos-wrap{ min-height: 360px; }
+}
+
+.carousel-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
