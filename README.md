@@ -32,9 +32,7 @@ A proposta abrange todas as etapas do processo de desenvolvimento:
 
 Os protótipos de baixa e alta fidelidade podem ser acessados no link abaixo:
 
-🔗 **Link para o Figma**: 
-
-https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0
+🔗 **https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0**: 
 
 ---
 
@@ -42,7 +40,7 @@ https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=P
 
 O projeto será disponibilizado online por meio de um serviço de deploy do Github Pages, e pode ser acessado no link abaixo:
 
-🔗 **Link do Deploy**: 
+🔗 **https://saraingridsousa.github.io/LandingPage_Barbearia/**: 
 
 ---
 
