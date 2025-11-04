@@ -10,9 +10,9 @@ O propósito principal deste projeto é atender às necessidades reais da barbea
 
 A proposta abrange todas as etapas do processo de desenvolvimento:
 
-- ✏️ **Prototipação**: Foram desenvolvidos protótipos de baixa e alta fidelidade utilizando o [Figma](https://www.figma.com), com foco em usabilidade e estética.
+- ✏️ **Prototipação**: Foram desenvolvidos protótipos de baixa e alta fidelidade utilizando o [Figma](https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0), com foco em usabilidade e estética.
 
-- 💻 **Implementação**: A aplicação será construída sem uso de ferramentas de inteligência artificial, utilizando **HTML**, **CSS** e **JavaScript puro**.
+- 💻 **Implementação**: A aplicação será construída utilizando **HTML**, **CSS** e **JavaScript puro**.
 
 ---
 
@@ -33,6 +33,8 @@ A proposta abrange todas as etapas do processo de desenvolvimento:
 Os protótipos de baixa e alta fidelidade podem ser acessados no link abaixo:
 
 🔗 **Link para o Figma**: 
+
+https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0
 
 ---
 

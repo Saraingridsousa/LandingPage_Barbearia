@@ -2,9 +2,7 @@ $(document).ready(function() {
     $('#btn_mobile').on('click', function() {
         $('#mobile_menu').toggleClass('active');
     });
-    // Close mobile menu when a link inside it is clicked (so it collapses after navigation)
     $('#mobile_menu').on('click', 'a', function(){
-        // small delay to allow anchor navigation to start
         setTimeout(function(){ $('#mobile_menu').removeClass('active'); }, 50);
     });
 
@@ -64,14 +62,10 @@ $(document).ready(function() {
             }
             const $dots = $dotsWrap.find('.carousel-dot');
 
-            // Current refers to position in cloned slides (starts at 1 => first real slide)
             let current = 1;
 
-            // Helpers
             function isVertical(){ return window.matchMedia('(max-width: 520px)').matches; }
-            // compute slide size from the first real slide to avoid inconsistencies after cloning
             function slideSize(){
-                // after cloning, real first slide is at index 1
                 const $firstReal = $track.find('.carousel-slide').eq(1);
                 if(!$firstReal.length) return 0;
                 return isVertical() ? $firstReal.outerHeight(true) : $firstReal.outerWidth(true);
