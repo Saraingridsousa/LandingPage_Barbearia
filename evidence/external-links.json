@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://saraingridsousa.github.io/LandingPage_Barbearia/",
+    "status": 200,
+    "finalURL": "https://saraingridsousa.github.io/LandingPage_Barbearia/",
+    "ok": true
+  },
+  {
+    "url": "https://instagram.com/josedocorte7",
+    "status": 200,
+    "finalURL": "https://www.instagram.com/josedocorte7",
+    "ok": true
+  },
+  {
+    "url": "https://www.google.com/maps/dir/?api=1&destination=Rua%20Vieira%20Pinto%2C%2044%2C%20Centro%2C%20Lima%20Duarte%2C%20MG",
+    "status": 200,
+    "finalURL": "https://www.google.com/maps/dir/?api=1&destination=Rua%20Vieira%20Pinto%2C%2044%2C%20Centro%2C%20Lima%20Duarte%2C%20MG",
+    "ok": true
+  },
+  {
+    "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.8493832533852!2d-43.793388450261965!3d-21.841529232100918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9f4aab9e5fb45f%3A0xd6b718c9c08057cc!2sR.%20Vi%C3%AAira%20Pinto%2C%2044%20-%20Centro%2C%20Lima%20Duarte%20-%20MG%2C%2036140-000!5e1!3m2!1spt-BR!2sbr!4v1762271333396!5m2!1spt-BR!2sbr",
+    "status": 200,
+    "finalURL": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.8493832533852!2d-43.793388450261965!3d-21.841529232100918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9f4aab9e5fb45f%3A0xd6b718c9c08057cc!2sR.%20Vi%C3%AAira%20Pinto%2C%2044%20-%20Centro%2C%20Lima%20Duarte%20-%20MG%2C%2036140-000!5e1!3m2!1spt-BR!2sbr!4v1762271333396!5m2!1spt-BR!2sbr",
+    "ok": true
+  }
+]

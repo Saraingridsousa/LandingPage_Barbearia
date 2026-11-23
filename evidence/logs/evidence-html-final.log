@@ -1,0 +1,4 @@
+
+> jr-do-corte@2.0.0 check:html
+> html-validate index.html
+

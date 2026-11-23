@@ -1,224 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111111">
+    <title>JR do Corte | Barbearia em Lima Duarte, MG</title>
+    <meta name="description" content="Seu estilo em boas mãos. Conheça a JR do Corte, barbearia em Lima Duarte, MG: corte, barba, corte kids e cuidados para o seu visual. Entre em contato para agendar.">
+    <link rel="canonical" href="https://saraingridsousa.github.io/LandingPage_Barbearia/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="JR do Corte">
+    <meta property="og:title" content="JR do Corte — Seu estilo em boas mãos">
+    <meta property="og:description" content="Cortes modernos e clássicos, barba e cuidado com seu visual no Centro de Lima Duarte, MG.">
+    <meta property="og:url" content="https://saraingridsousa.github.io/LandingPage_Barbearia/">
+    <meta property="og:image" content="https://saraingridsousa.github.io/LandingPage_Barbearia/src/imagens/logo.png">
+    <meta property="og:image:alt" content="Logo da barbearia JR do Corte">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="src/imagens/logo.png">
+    <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="stylesheet" href="src/styles/header.css">
-    <link rel="stylesheet" href="src/styles/footer.css">
-    <link rel="stylesheet" href="src/styles/home.css">  
+    <link rel="stylesheet" href="src/styles/home.css">
     <link rel="stylesheet" href="src/styles/servicos.css">
-    <link rel="stylesheet" href="src/styles/depoismentos.css">
-    <link rel="stylesheet" href="src/styles/styles.css">  
     <link rel="stylesheet" href="src/styles/sobre.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="src/styles/depoimentos.css">
+    <link rel="stylesheet" href="src/styles/footer.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="src/fonts/montserrat-latin-400-800-normal.woff2" as="font" type="font/woff2" crossorigin>
     <script src="src/javascript/script.js" defer></script>
-    <title>JR do Corte</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "LocalBusiness",
+      "name": "JR do Corte",
+      "url": "https://saraingridsousa.github.io/LandingPage_Barbearia/",
+      "image": "https://saraingridsousa.github.io/LandingPage_Barbearia/src/imagens/logo.png",
+      "logo": "https://saraingridsousa.github.io/LandingPage_Barbearia/src/imagens/logo.png",
+      "description": "Barbearia em Lima Duarte, MG.",
+      "address": { "@type": "PostalAddress", "streetAddress": "Rua Vieira Pinto, 44", "addressLocality": "Lima Duarte", "addressRegion": "MG", "addressCountry": "BR" },
+      "sameAs": ["https://instagram.com/josedocorte7"]
+    }
+    </script>
+    <script id="business-contact" type="application/json">{"whatsapp":null}</script>
 </head>
 <body>
-
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
     <header class="header">
-        <nav id="navbar">
-
-            <div class="logo_nav">
-                <img  src="src/imagens/logo.png" href="#home" alt="Logo JR do Corte">
-            </div>
-                <div class="nav_esq">
-                <ul id="nav_list">
-                    <li class="nav-item active">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sobre">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#serviços">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#depoimentos">Depoimentos</a>
-                    </li>  
-                </ul>
-                
-                <a class="btn_nav" href="https://api.whatsapp.com/send/?phone=553299827807&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Agendar</a>
-            </div>
-            
-            <button id="btn_mobile">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
-
-        <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a href="#serviços">Serviços</a></li>
-                <li class="nav-item"><a href="#depoimentos">Depoimentos</a></li>
-                <li class="nav-item"><a class="btn_nav_mobile" href="https://api.whatsapp.com/send/?phone=553299827807&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Agendar</a></li>
+        <nav id="navbar" class="container" aria-label="Navegação principal">
+            <a class="logo_nav" href="#home" aria-label="JR do Corte — início"><img src="src/imagens/logo.png" width="196" height="196" alt="JR do Corte"></a>
+            <button id="btn_mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav_list" hidden><span aria-hidden="true">☰</span></button>
+            <ul id="nav_list">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#serviços">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato" class="button button-small" data-booking>Agendar horário <span aria-hidden="true">↗</span></a></li>
             </ul>
- 
-        </div>
-
+        </nav>
     </header>
-
-    <main id="content">
-        <section id="home">
-            <div id="cta">
-                <h1 class="title">
-                    Seu estilo em
-                    <br>
-                    <span>boas mãos.</span>
-                </h1>
-
-                <p class="description">
-                    Transforme seu visual com nossos serviços de excelência.
-                </p>
-
-                <div class="cta_button">
-                    <a class="btn_cta" href="https://api.whatsapp.com/send/?phone=553299827807&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-                        Agende seu Horário
-                    </a>
-                </div>
-            </div>
-            <div id="banner">
-                <img src="src/imagens/capa.svg" alt="Banner JR do Corte">
-            </div>
-
-        </section>
-
-        <section id="sobre">
-            <h2 class="medievalsharp-regular">Sobre</h2>
-            <div id="sobre_info">
-              <div class="sobre_row">
-                <div id="fotos">
-                  <img src="src/imagens/foto_jr.svg" alt="JR" class="foto_sobre">
-                </div>
-                <div id="info_gerais">
-                                    <p class="info_text">
-                                        Meu nome é <span style="color: #FFD700;">José Ricardo</span>, tenho 17 anos e sou apaixonado por barbearia desde os 15, quando finalizei meu primeiro curso no Instituto Vall Costa.<br><br>
-                                        A cada corte, percebo que a barbearia vai muito além de aparar cabelos ou fazer a barba. É sobre transformar a autoestima, proporcionar confiança e criar uma experiência única para cada cliente.<br><br>
-                                        Estou sempre buscando me aperfeiçoar e trazer as melhores técnicas do mercado. Meu espaço foi pensado para oferecer cuidado, atenção e bem-estar. Aqui, você encontra excelência e a certeza de estar em boas mãos.
-                                    </p>
-                </div>
-              </div>
-              <div class="sobre_row">
-                <div class="container_contato">
-                  <img src="src/imagens/logo.png" alt="Logo JR do Corte" class="logo_sobre">
-                  <p class="localizacao"><strong>Localizado no <span style="color: #FFD700;">coração da cidade</span></strong></p>
-                  <p class="endereco">Rua Vieira Pinto, 44<br>Centro - Lima Duarte</p>
-                  <p class="instagram"><a href="https://instagram.com/josedocorte7"><i class="fa-brands fa-instagram"></i> @josedocorte7</a></p>
-                </div>
-                <div class="mapBox">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.8493832533852!2d-43.793388450261965!3d-21.841529232100918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9f4aab9e5fb45f%3A0xd6b718c9c08057cc!2sR.%20Vi%C3%AAira%20Pinto%2C%2044%20-%20Centro%2C%20Lima%20Duarte%20-%20MG%2C%2036140-000!5e1!3m2!1spt-BR!2sbr!4v1762271333396!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
-              </div>
-            </div>
-
-        </section>
-        <section id="serviços">
-            <h2 class="medievalsharp-regular">Serviços</h2>
-            <div class="servicos-grid">
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Corte.svg" alt="Ícone Corte"></div>
-                    <br>
-                    <h3 class="service-title">Corte</h3>
-                    <p class="service-desc">Cortes modernos e clássicos para <br> todos os estilos.</p>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Barba.svg" alt="Ícone Barba"></div>
-                    <h3 class="service-title">Barba</h3>
-                    <p class="service-desc">Barba tradicional, design e<br> tratamento de pele.</p>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Corte_Kids.svg" alt="Ícone Corte Kids"></div>
-                    <br>
-                    <h3 class="service-title">Corte Kids</h3>
-                    <p class="service-desc">Ambiente acolhedor para a primeira experiência das crianças.</p>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Sobrancelha.svg" alt="Ícone Sobrancelha"></div>
-                    <br>
-                    <br>
-                    <h3 class="service-title">Sobrancelha</h3>
-                    <p class="service-desc">Design e correção para uma expressão mais marcante.</p>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Pigmentação.svg" alt="Ícone Pigmentação"></div>
-                    <br>
-                    <br>
-                    <h3 class="service-title">Pigmentação</h3>
-                    <p class="service-desc">Procedimentos de pigmentação para realçar o visual.</p>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon"><img src="src/imagens/Produtos.svg" alt="Ícone Produtos"></div>
-                    <h3 class="service-title">Produtos</h3>
-                    <p class="service-desc">Linha selecionada de produtos para manter o corte e a barba.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="depoimentos">
-            <h2 class="medievalsharp-regular">Depoimentos</h2>
-
-            <div class="depoimentos-wrap">
-                <div class="carousel" data-interval="5000">
-                    <button class="carousel-arrow prev" aria-label="Anterior">&#10094;</button>
-
-                    <div class="carousel-track-wrapper">
-                        <ul class="carousel-track">
-                            <li class="carousel-slide">
-                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 1">
-                            </li>
-
-                            <li class="carousel-slide">
-                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 2">
-                            </li>
-
-                            <li class="carousel-slide">
-                                <img src="src/imagens/imagem_carrossel.jpg" alt="Depoimento imagem 3">
-                            </li>
-
-                        </ul>
+    <main id="content" tabindex="-1">
+        <section id="home" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div id="cta">
+                    <p class="eyebrow">Barbearia · Lima Duarte, MG</p>
+                    <h1 id="hero-title">Seu estilo em <span>boas mãos.</span></h1>
+                    <p class="hero-description">Transforme seu visual com nossos serviços de excelência.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="#contato" data-booking>Agende seu horário <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="#serviços">Conheça os serviços <span aria-hidden="true">↓</span></a>
                     </div>
-
-                    <button class="carousel-arrow next" aria-label="Próximo">&#10095;</button>
+                    <p class="hero-location">Rua Vieira Pinto, 44 · Centro</p>
                 </div>
-
-                <div class="carousel-dots" aria-hidden="false"></div>
-
-                <div class="depo-cta">
-                    <a class="btn_cta" href="https://api.whatsapp.com/send/?phone=553299827807&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Entre em contato</a>
+                <div id="banner">
+                    <picture>
+                        <source type="image/webp" srcset="src/imagens/optimized/capa-640.webp 640w, src/imagens/optimized/capa-916.webp 916w" sizes="(min-width: 1024px) 50vw, 90vw">
+                        <img src="src/imagens/capa.svg" alt="Cliente recebendo um corte de cabelo na composição original da JR do Corte" width="916" height="785" fetchpriority="high">
+                    </picture>
                 </div>
             </div>
-
+            <div class="hero-bottom container"><span>Corte &amp; cuidado</span><span>JR DO CORTE</span><a href="#localizacao">No coração de Lima Duarte <span aria-hidden="true">↗</span></a></div>
         </section>
-
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-left">
-                    <img src="src/imagens/logo.png" alt="Logo JR do Corte" class="footer-logo">
-                </div>
-
-                <div class="footer-center">
-                    <h3 class="footer-title">SEU ESTILO<br><span>EM BOAS MÃOS</span></h3>
-                    <p class="footer-address">Rua Vieira Pinto, 44<br>Centro - Lima Duarte</p>
-                </div>
-
-                <div class="footer-right">
-                    <a class="contact-pill instagram" href="https://instagram.com/josedocorte7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span>@josedocorte7</span></a>
-                    <a class="contact-pill whatsapp" href="https://wa.me/5532999827807" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i><span>(32) 99982-7807</span></a>
+        <section id="serviços" class="section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-heading"><div><p class="eyebrow">O cuidado está nos detalhes</p><h2 id="services-title">Serviços</h2></div><p>Cortes modernos e clássicos para todos os estilos.</p></div>
+                <div class="servicos-grid">
+                    <article class="service-card"><img src="src/imagens/optimized/corte.webp" width="225" height="226" alt="" loading="lazy" decoding="async"><h3>Corte</h3><p>Cortes modernos e clássicos para todos os estilos.</p><a class="text-link" href="#contato" data-booking data-service="Corte">Agendar corte <span aria-hidden="true">↗</span></a></article>
+                    <article class="service-card"><img src="src/imagens/optimized/barba.webp" width="231" height="242" alt="" loading="lazy" decoding="async"><h3>Barba</h3><p>Barba tradicional, design e tratamento de pele.</p><a class="text-link" href="#contato" data-booking data-service="Barba">Agendar barba <span aria-hidden="true">↗</span></a></article>
+                    <article class="service-card"><img src="src/imagens/optimized/corte-kids.webp" width="243" height="238" alt="" loading="lazy" decoding="async"><h3>Corte Kids</h3><p>Ambiente acolhedor para a primeira experiência das crianças.</p><a class="text-link" href="#contato" data-booking data-service="Corte Kids">Agendar corte kids <span aria-hidden="true">↗</span></a></article>
+                    <article class="service-card"><img src="src/imagens/optimized/sobrancelha.webp" width="275" height="238" alt="" loading="lazy" decoding="async"><h3>Sobrancelha</h3><p>Design e correção para uma expressão mais marcante.</p><a class="text-link" href="#contato" data-booking data-service="Sobrancelha">Agendar sobrancelha <span aria-hidden="true">↗</span></a></article>
+                    <article class="service-card"><img src="src/imagens/optimized/pigmentacao.webp" width="271" height="237" alt="" loading="lazy" decoding="async"><h3>Pigmentação</h3><p>Procedimentos de pigmentação para realçar o visual.</p><a class="text-link" href="#contato" data-booking data-service="Pigmentação">Agendar pigmentação <span aria-hidden="true">↗</span></a></article>
+                    <article class="service-card"><img src="src/imagens/optimized/produtos.webp" width="234" height="277" alt="" loading="lazy" decoding="async"><h3>Produtos</h3><p>Linha selecionada de produtos para manter o corte e a barba.</p><a class="text-link" href="#contato" data-booking data-service="Produtos">Consultar produtos <span aria-hidden="true">↗</span></a></article>
                 </div>
             </div>
-        </footer>
-
+        </section>
+        <section id="sobre" class="section" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <figure class="about-photo"><picture><source type="image/webp" srcset="src/imagens/optimized/foto-jr-360.webp 360w, src/imagens/optimized/foto-jr-600.webp 600w" sizes="(min-width: 768px) 40vw, 85vw"><img src="src/imagens/foto_jr.svg" alt="José Ricardo, da JR do Corte" width="778" height="1038" loading="lazy" decoding="async"></picture><figcaption>José Ricardo <span>JR do Corte</span></figcaption></figure>
+                <div class="about-copy"><p class="eyebrow">Conheça quem cuida do seu visual</p><h2 id="about-title">Mais que um corte.<span>Uma experiência.</span></h2>
+                    <p>Meu nome é <strong>José Ricardo</strong>, tenho 17 anos e sou apaixonado por barbearia desde os 15, quando finalizei meu primeiro curso no Instituto Vall Costa.</p>
+                    <p>A cada corte, percebo que a barbearia vai muito além de aparar cabelos ou fazer a barba. É sobre transformar a autoestima, proporcionar confiança e criar uma experiência única para cada cliente.</p>
+                    <p>Estou sempre buscando me aperfeiçoar e trazer as melhores técnicas do mercado. Meu espaço foi pensado para oferecer cuidado, atenção e bem-estar. Aqui, você encontra excelência e a certeza de estar em boas mãos.</p>
+                    <a class="text-link" href="https://instagram.com/josedocorte7" target="_blank" rel="noopener noreferrer">Acompanhe @josedocorte7 <span class="sr-only">(abre em nova aba)</span><span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+        <section id="depoimentos" class="section" aria-labelledby="testimonials-title">
+            <div class="container testimonial-layout"><div><p class="eyebrow">A experiência de quem passa por aqui</p><h2 id="testimonials-title">Depoimentos</h2></div><div><p>Avaliações de clientes ainda não estão disponíveis nesta página.</p><a class="text-link" href="#contato">Converse com a JR do Corte <span aria-hidden="true">↗</span></a></div></div>
+        </section>
+        <section id="localizacao" class="section" aria-labelledby="location-title">
+            <div class="container location-grid"><div><p class="eyebrow">Venha conhecer</p><h2 id="location-title">No coração<span>da cidade.</span></h2><address><strong>JR do Corte</strong><span>Rua Vieira Pinto, 44</span><span>Centro · Lima Duarte, MG</span></address><a class="button button-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Vieira%20Pinto%2C%2044%2C%20Centro%2C%20Lima%20Duarte%2C%20MG" target="_blank" rel="noopener noreferrer">Como chegar <span class="sr-only">(abre em nova aba)</span><span aria-hidden="true">↗</span></a></div>
+                <div class="mapBox"><iframe title="Localização da JR do Corte em Lima Duarte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d837.8493832533852!2d-43.793388450261965!3d-21.841529232100918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9f4aab9e5fb45f%3A0xd6b718c9c08057cc!2sR.%20Vi%C3%AAira%20Pinto%2C%2044%20-%20Centro%2C%20Lima%20Duarte%20-%20MG%2C%2036140-000!5e1!3m2!1spt-BR!2sbr!4v1762271333396!5m2!1spt-BR!2sbr" width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+            </div>
+        </section>
+        <section id="contato" class="section contact-section" aria-labelledby="contact-title">
+            <div class="container contact-layout"><div><p class="eyebrow">Seu próximo visual começa aqui</p><h2 id="contact-title">Vamos agendar?</h2><p id="contact-status">Para consultar a disponibilidade e agendar, fale com a JR do Corte pelo Instagram. O contato de WhatsApp está em atualização.</p></div><a class="button" href="https://instagram.com/josedocorte7" target="_blank" rel="noopener noreferrer" id="contact-primary">Falar pelo Instagram <span class="sr-only">(abre em nova aba)</span><span aria-hidden="true">↗</span></a></div>
+        </section>
     </main>
-
+    <footer class="site-footer"><div class="container footer-inner"><a href="#home" aria-label="JR do Corte — voltar ao início"><img src="src/imagens/logo.png" width="196" height="196" alt="JR do Corte" loading="lazy"></a><p class="footer-title">Seu estilo em <span>boas mãos.</span></p><div><a class="text-link" href="https://instagram.com/josedocorte7" target="_blank" rel="noopener noreferrer">@josedocorte7 <span class="sr-only">(abre em nova aba)</span><span aria-hidden="true">↗</span></a><p>Rua Vieira Pinto, 44 · Lima Duarte, MG</p></div></div><div class="container footer-bottom"><span>JR do Corte</span><a href="#home">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
 </body>
 </html>

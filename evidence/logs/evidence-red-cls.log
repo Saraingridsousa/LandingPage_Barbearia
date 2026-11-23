@@ -1,0 +1,37 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test tests/performance.spec.cjs
+
+
+Running 1 test using 1 worker
+
+  x  1 tests\performance.spec.cjs:2:1 › menu não desloca conteúdo ao carregar JavaScript atrasado (6.1s)
+
+
+  1) tests\performance.spec.cjs:2:1 › menu não desloca conteúdo ao carregar JavaScript atrasado ────
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 2
+    Received:    316
+
+      11 |   await page.waitForLoadState('load');
+      12 |   const after = await page.locator('#content').boundingBox();
+    > 13 |   expect(Math.abs(before.y - after.y)).toBeLessThanOrEqual(2);
+         |                                        ^
+      14 | });
+      15 |
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\performance.spec.cjs:13:40
+
+    Error Context: test-results\performance-menu-não-deslo-7d546-arregar-JavaScript-atrasado\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\performance-menu-não-deslo-7d546-arregar-JavaScript-atrasado\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\performance-menu-não-deslo-7d546-arregar-JavaScript-atrasado\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\performance.spec.cjs:2:1 › menu não desloca conteúdo ao carregar JavaScript atrasado ─────

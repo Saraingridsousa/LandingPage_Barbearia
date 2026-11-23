@@ -1,135 +1,82 @@
-$(document).ready(function() {
-    $('#btn_mobile').on('click', function() {
-        $('#mobile_menu').toggleClass('active');
-    });
-    $('#mobile_menu').on('click', 'a', function(){
-        setTimeout(function(){ $('#mobile_menu').removeClass('active'); }, 50);
-    });
+'use strict';
 
+(() => {
+  const nav = document.querySelector('#navbar');
+  const button = document.querySelector('#btn_mobile');
+  const links = document.querySelector('#nav_list');
+  if (!nav || !button || !links) return;
 
-    (function(){
-        const $carousel = $('.carousel');
-        if(!$carousel.length) return;
+  const desktop = window.matchMedia('(min-width: 1024px)');
+  const setOpen = (open) => {
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    links.hidden = !desktop.matches && !open;
+  };
+  const resetMenu = () => {
+    const focusWasInMenu = links.contains(document.activeElement);
+    button.hidden = desktop.matches;
+    setOpen(false);
+    if (!desktop.matches && focusWasInMenu) button.focus();
+    if (desktop.matches && document.activeElement === button) links.querySelector('a').focus();
+  };
+  button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+  links.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    setOpen(false);
+    if (link.hash) {
+      const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+      if (target) {
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      }
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      button.focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target)) setOpen(false);
+  });
+  nav.addEventListener('focusout', (event) => {
+    if (!nav.contains(event.relatedTarget)) setOpen(false);
+  });
+  desktop.addEventListener('change', resetMenu);
+  resetMenu();
+  links.dataset.ready = 'true';
+})();
 
-        $carousel.each(function(){
-            const $c = $(this);
-            const $track = $c.find('.carousel-track');
-            const $originalSlides = $track.find('.carousel-slide');
-            const $prev = $c.find('.carousel-arrow.prev');
-            const $next = $c.find('.carousel-arrow.next');
-            const $dotsWrap = $c.parent().find('.carousel-dots');
-            const interval = parseInt($c.data('interval')) || 5000;
-            let timer = null;
+// A confirmed international number belongs in #business-contact, never inferred here.
+(() => {
+  const config = document.querySelector('#business-contact');
+  if (!config) return;
+  let contact;
+  try { contact = JSON.parse(config.textContent); }
+  catch { return; }
+  if (!contact || typeof contact !== 'object' || Array.isArray(contact)) return;
+  const phone = contact.whatsapp;
+  if (typeof phone !== 'string' || !/^[1-9]\d{7,14}$/.test(phone)) return;
 
-            if($originalSlides.length <= 1){
-                $originalSlides.each(function(i){
-                    const $dot = $('<button>').addClass('carousel-dot').attr('data-index', i);
-                    if(i===0) $dot.addClass('active');
-                    $dotsWrap.append($dot);
-                });
-                const $dots = $dotsWrap.find('.carousel-dot');
-                let current = 0;
-                function goToSimple(i){ if(i < 0) i = 0; if(i >= $originalSlides.length) i = 0; current = i; const slideWidth = $originalSlides.outerWidth(true); $track.css('transform', 'translateX(' + ( - (slideWidth * i) ) + 'px)'); $dots.removeClass('active').eq(i).addClass('active'); }
-                function nextSimple(){ goToSimple(current+1); }
-                $next.on('click', function(){ nextSimple(); restartTimer(); });
-                $prev.on('click', function(){ goToSimple(current-1); restartTimer(); });
-                $dots.on('click', function(){ const i = parseInt($(this).attr('data-index')); goToSimple(i); restartTimer(); });
-                function startTimer(){ if(timer) clearInterval(timer); timer = setInterval(nextSimple, interval); }
-                function stopTimer(){ if(timer) clearInterval(timer); timer = null; }
-                function restartTimer(){ stopTimer(); startTimer(); }
-                $c.on('mouseenter', stopTimer).on('mouseleave', startTimer);
-                let startX = 0;
-                $track.on('touchstart', function(e){ startX = e.originalEvent.touches[0].clientX; });
-                $track.on('touchend', function(e){ const endX = e.originalEvent.changedTouches[0].clientX; if(startX - endX > 40){ nextSimple(); restartTimer(); } else if(endX - startX > 40){ goToSimple(current-1); restartTimer(); } });
-                $(window).on('resize', function(){ goToSimple(current); });
-                goToSimple(0);
-                startTimer();
-                return;
-            }
-
-            const slideCount = $originalSlides.length;
-            const $firstClone = $originalSlides.first().clone().addClass('clone');
-            const $lastClone = $originalSlides.last().clone().addClass('clone');
-            $track.append($firstClone);
-            $track.prepend($lastClone);
-
-            const $slides = $track.find('.carousel-slide');
-
-            for(let i=0;i<slideCount;i++){
-                const $dot = $('<button>').addClass('carousel-dot').attr('data-index', i);
-                if(i===0) $dot.addClass('active');
-                $dotsWrap.append($dot);
-            }
-            const $dots = $dotsWrap.find('.carousel-dot');
-
-            let current = 1;
-
-            function isVertical(){ return window.matchMedia('(max-width: 520px)').matches; }
-            function slideSize(){
-                const $firstReal = $track.find('.carousel-slide').eq(1);
-                if(!$firstReal.length) return 0;
-                return isVertical() ? $firstReal.outerHeight(true) : $firstReal.outerWidth(true);
-            }
-            function setTransition(enabled){ $track.css('transition', enabled ? '' : 'none'); }
-            function updateDots(){ const realIndex = (current - 1 + slideCount) % slideCount; $dots.removeClass('active').eq(realIndex).addClass('active'); }
-            function setPosition(){ const size = slideSize(); if(!size && size !== 0){ /* guard */ }
-                if(isVertical()){ $track.css('transform','translateY(' + ( - (size * current) ) + 'px)'); } else { $track.css('transform','translateX(' + ( - (size * current) ) + 'px)'); } updateDots(); }
-
-            function goToReal(realIndex){ current = realIndex + 1; setTransition(true); setPosition(); }
-
-            function nextSlide(){
-                setTransition(true);
-                current++;
-                setPosition();
-            }
-
-            function prevSlide(){
-                setTransition(true);
-                current--;
-                setPosition();
-            }
-
-            $track.on('transitionend', function(){
-                const lastCloneIndex = slideCount + 1;
-                if(current === 0){
-                    setTransition(false);
-                    current = slideCount;
-                    setPosition();
-                    void $track[0].offsetHeight;
-                    setTransition(true);
-                } else if(current === lastCloneIndex){
-                    setTransition(false);
-                    current = 1;
-                    setPosition();
-                    void $track[0].offsetHeight;
-                    setTransition(true);
-                }
-            });
-
-            $next.on('click', function(){ nextSlide(); restartTimer(); });
-            $prev.on('click', function(){ prevSlide(); restartTimer(); });
-
-            $dots.on('click', function(){ const i = parseInt($(this).attr('data-index')); goToReal(i); restartTimer(); });
-
-            function startTimer(){ if(timer) clearInterval(timer); timer = setInterval(nextSlide, interval); }
-            function stopTimer(){ if(timer) clearInterval(timer); timer = null; }
-            function restartTimer(){ stopTimer(); startTimer(); }
-
-            $c.on('mouseenter', stopTimer).on('mouseleave', startTimer);
-
-            let startPos = 0;
-            $track.on('touchstart', function(e){ startPos = isVertical() ? e.originalEvent.touches[0].clientY : e.originalEvent.touches[0].clientX; });
-            $track.on('touchend', function(e){ const endPos = isVertical() ? e.originalEvent.changedTouches[0].clientY : e.originalEvent.changedTouches[0].clientX; if(startPos - endPos > 40){ nextSlide(); restartTimer(); } else if(endPos - startPos > 40){ prevSlide(); restartTimer(); } });
-
-            function applyOrientationClass(){ if(isVertical()){ $c.addClass('vertical'); $prev.html('&#9650;'); $next.html('&#9660;'); } else { $c.removeClass('vertical'); $prev.html('&#10094;'); $next.html('&#10095;'); } }
-            applyOrientationClass();
-            $(window).on('resize', function(){ applyOrientationClass(); setPosition(); });
-
-            setTransition(false);
-            setPosition();
-            setTimeout(function(){ setTransition(true); }, 20);
-            startTimer();
-        });
-    })();
-
-});
+  const bookingURL = (service) => {
+    const message = service
+      ? `Olá! Gostaria de saber mais sobre ${service} na JR do Corte.`
+      : 'Olá! Gostaria de agendar um horário na JR do Corte.';
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  };
+  document.querySelectorAll('[data-booking]').forEach((link) => {
+    link.href = bookingURL(link.dataset.service);
+    // Use the current tab: avoids unannounced new windows for booking controls.
+  });
+  const primary = document.querySelector('#contact-primary');
+  if (primary) {
+    primary.href = bookingURL();
+    primary.textContent = 'Agendar pelo WhatsApp ↗';
+    primary.removeAttribute('target');
+    primary.removeAttribute('rel');
+  }
+  const status = document.querySelector('#contact-status');
+  if (status) status.textContent = 'Consulte a disponibilidade e agende seu horário pelo WhatsApp.';
+})();

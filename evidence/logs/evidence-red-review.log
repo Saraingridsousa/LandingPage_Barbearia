@@ -1,0 +1,48 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test tests/review.spec.cjs
+
+
+Running 5 tests using 1 worker
+
+  x  1 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: null (7.2s)
+  ok 2 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: [] (4.2s)
+  ok 3 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: "invalid" (4.0s)
+  ok 4 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: {malformed (6.1s)
+  ok 5 tests\review.spec.cjs:19:1 › menu aberto acessível e link ativado somente com teclado (4.9s)
+
+
+  1) tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: null ───────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "Cannot read properties of null (reading 'whatsapp')",
+    + ]
+
+      13 |     await expect(page.locator('[data-booking]').first()).toHaveAttribute('href', '#contato');
+      14 |     await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://instagram.com/josedocorte7');
+    > 15 |     expect(errors).toEqual([]);
+         |                    ^
+      16 |   });
+      17 | }
+      18 |
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\review.spec.cjs:15:20
+
+    Error Context: test-results\review-configuração-raiz-inválida-não-causa-erro-null\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\review-configuração-raiz-inválida-não-causa-erro-null\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\review-configuração-raiz-inválida-não-causa-erro-null\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: null ────────────────────
+  4 passed (34.4s)

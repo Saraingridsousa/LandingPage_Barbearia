@@ -1,0 +1,45 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test --grep menu móvel
+
+
+Running 1 test using 1 worker
+
+  x  1 tests\site.spec.cjs:3:1 › menu móvel funciona por teclado, Escape e navegação (11.0s)
+
+
+  1) tests\site.spec.cjs:3:1 › menu móvel funciona por teclado, Escape e navegação ─────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByRole('button', { name: 'Abrir menu' })
+    Expected: "false"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" getByRole('button', { name: 'Abrir menu' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Abrir menu' })
+
+
+       5 |   await page.goto('/');
+       6 |   const toggle = page.getByRole('button', { name: 'Abrir menu' });
+    >  7 |   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+         |                        ^
+       8 |   await expect(toggle).toHaveAttribute('aria-controls', 'nav_list');
+       9 |   await toggle.focus();
+      10 |   await page.keyboard.press('Enter');
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\site.spec.cjs:7:24
+
+    Error Context: test-results\site-menu-móvel-funciona-por-teclado-Escape-e-navegação\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-menu-móvel-funciona-por-teclado-Escape-e-navegação\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-menu-móvel-funciona-por-teclado-Escape-e-navegação\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\site.spec.cjs:3:1 › menu móvel funciona por teclado, Escape e navegação ──────────────────

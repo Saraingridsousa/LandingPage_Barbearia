@@ -1,0 +1,84 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test --grep contato pendente|conteúdo autêntico
+
+
+Running 2 tests using 1 worker
+
+  x  1 tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real (7.5s)
+  x  2 tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos (7.8s)
+
+
+  1) tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real ───────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('a[href*="wa.me"], a[href*="api.whatsapp"]')
+    Expected: 0
+    Received: 3
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('a[href*="wa.me"], a[href*="api.whatsapp"]') with timeout 5000ms
+      - waiting for locator('a[href*="wa.me"], a[href*="api.whatsapp"]')
+        13 × locator resolved to 3 elements
+           - unexpected value "3"
+
+
+      4 | test('contato pendente não escolhe número e mantém alternativa real', async ({ page }) => {
+      5 |   await page.goto('/');
+    > 6 |   await expect(page.locator('a[href*="wa.me"], a[href*="api.whatsapp"]')).toHaveCount(0);
+        |                                                                           ^
+      7 |   await expect(page.locator('[data-booking]').first()).toHaveAttribute('href', '#contato');
+      8 |   await expect(page.locator('#contact-status')).toContainText('Instagram');
+      9 |   await expect(page.locator('#contato a[href="https://instagram.com/josedocorte7"]')).toBeVisible();
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\site.spec.cjs:6:75
+
+    Error Context: test-results\site-contato-pendente-não--3b2fd-o-e-mantém-alternativa-real\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-contato-pendente-não--3b2fd-o-e-mantém-alternativa-real\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-contato-pendente-não--3b2fd-o-e-mantém-alternativa-real\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos ──────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#depoimentos img, .carousel')
+    Expected: 0
+    Received: 4
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#depoimentos img, .carousel') with timeout 5000ms
+      - waiting for locator('#depoimentos img, .carousel')
+        13 × locator resolved to 4 elements
+           - unexpected value "4"
+
+
+      13 |   await page.goto('/');
+      14 |   await expect(page.locator('.service-card')).toHaveCount(6);
+    > 15 |   await expect(page.locator('#depoimentos img, .carousel')).toHaveCount(0);
+         |                                                             ^
+      16 |   await expect(page.locator('h1')).toHaveCount(1);
+      17 |   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Lima Duarte/);
+      18 |   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://saraingridsousa.github.io/LandingPage_Barbearia/');
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\site.spec.cjs:15:61
+
+    Error Context: test-results\site-conteúdo-autêntico-se-78de5-evida-e-metadados-completos\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-conteúdo-autêntico-se-78de5-evida-e-metadados-completos\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-conteúdo-autêntico-se-78de5-evida-e-metadados-completos\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real ────────
+    tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos ───────

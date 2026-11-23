@@ -1,0 +1,386 @@
+{
+  "baseline": "9822f22508b9841a980b3b3bb6c51cafd3d4ab3b",
+  "branch": "refactor/landing-page-v2",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "exists": true,
+      "sha256": "883cc291ffcf53d209c9b2adbf8c90c72096879c08b32efe373635805f81cf2b"
+    },
+    {
+      "path": ".gitignore",
+      "exists": true,
+      "sha256": "b2017dc6311d71ac55542120aa0cb2c54cc1a395feb911186ac928b926f20873"
+    },
+    {
+      "path": "README.md",
+      "exists": true,
+      "sha256": "298023d25c072089d604cd1542871aab01a04686176f83f6235bb41340ff6f14"
+    },
+    {
+      "path": "docs/IMPLEMENTATION.md",
+      "exists": true,
+      "sha256": "2fc4aa31bb3606bccb0bc49d6f1ddbdcf5e7a4a2f76af9583789c17041aabdf2"
+    },
+    {
+      "path": "evidence/changed-files.json",
+      "exists": true,
+      "sha256": null
+    },
+    {
+      "path": "evidence/delivery-verification.json",
+      "exists": true,
+      "sha256": "ecc02ef917c1a00c3a0140a03d853004997908443053682bb5a8e897cc55772c"
+    },
+    {
+      "path": "evidence/direct-file-smoke.json",
+      "exists": true,
+      "sha256": "3bc597a80c1aa82cea8f2af784cc169863859533ec38aa00b272fd9fced1bf08"
+    },
+    {
+      "path": "evidence/external-links.json",
+      "exists": true,
+      "sha256": "a91227fa74de1e0091c1cf0682b2c27312294479018adf3000723222c49fa685"
+    },
+    {
+      "path": "evidence/lighthouse-before-cls-fix.json",
+      "exists": true,
+      "sha256": "3243f29a31294baa3e86c62a2704a67cca7eadb80867a207880c8ff6c1db1abd"
+    },
+    {
+      "path": "evidence/lighthouse-summary.json",
+      "exists": true,
+      "sha256": "7baa63c180d6dd7256c5ed45cd1b345388070afa2a276d6f95f96d913b0ad56c"
+    },
+    {
+      "path": "evidence/logs/evidence-content-cycle.log",
+      "exists": true,
+      "sha256": "dddb137e39ea8c4fc7145c65b1ebc848c0e8a448d5187e6591aac3029e203c62"
+    },
+    {
+      "path": "evidence/logs/evidence-external-links.log",
+      "exists": true,
+      "sha256": "9f0dc1e2664b562179b93189c425fe5087940ab34d465ca3771fba23dd29e407"
+    },
+    {
+      "path": "evidence/logs/evidence-green-menu.log",
+      "exists": true,
+      "sha256": "ceb939faf998f12f9e40c8ab36deb2c1db716027d0f8b52614913102b914e3cb"
+    },
+    {
+      "path": "evidence/logs/evidence-html-final.log",
+      "exists": true,
+      "sha256": "c3378858e0d5b1cc7f67bc11a5564f0c3e2f3a1c98d7f94251cbfd20c5e6a1a6"
+    },
+    {
+      "path": "evidence/logs/evidence-html-initial.log",
+      "exists": true,
+      "sha256": "c3378858e0d5b1cc7f67bc11a5564f0c3e2f3a1c98d7f94251cbfd20c5e6a1a6"
+    },
+    {
+      "path": "evidence/logs/evidence-js-final.log",
+      "exists": true,
+      "sha256": "904de4e93910f5ad66007577d657b2c4e367a7ad8734b5d5482938990bfafa0c"
+    },
+    {
+      "path": "evidence/logs/evidence-lighthouse-install.log",
+      "exists": true,
+      "sha256": "dfe6664187d050832cc18972664dca17bff3fd4c0c096084e572b20c3a8aa3ec"
+    },
+    {
+      "path": "evidence/logs/evidence-lighthouse.log",
+      "exists": true,
+      "sha256": "75885f373d62ab06a2beb1ac30f20043445298fa283c2a4c28164170504e74d6"
+    },
+    {
+      "path": "evidence/logs/evidence-npm-audit-after-fix.json",
+      "exists": true,
+      "sha256": "0e2042f428a3ce19b4a8c62f083db7a2bb8963aca30f3e8349585f0c39d06664"
+    },
+    {
+      "path": "evidence/logs/evidence-npm-audit-final.json",
+      "exists": true,
+      "sha256": "41f855d2d08e056d8e1fa1e40b0910eb5d4080aa35432a80137ce59447575e96"
+    },
+    {
+      "path": "evidence/logs/evidence-npm-audit-initial.json",
+      "exists": true,
+      "sha256": "0e2042f428a3ce19b4a8c62f083db7a2bb8963aca30f3e8349585f0c39d06664"
+    },
+    {
+      "path": "evidence/logs/evidence-red-cls.log",
+      "exists": true,
+      "sha256": "d372941e73135a898472345785a30e941ad5aa8753b096a70c2f07e24e1650bc"
+    },
+    {
+      "path": "evidence/logs/evidence-red-content.log",
+      "exists": true,
+      "sha256": "98c94f36677f5545f195c3a2026275294dd3cfc3befb0ba814a08bf8f0b9d1cf"
+    },
+    {
+      "path": "evidence/logs/evidence-red-menu.log",
+      "exists": true,
+      "sha256": "1bb596f88aa93419377a22664565ec30d1d2d99cfa4d4f98dd7e3e253f8fa757"
+    },
+    {
+      "path": "evidence/logs/evidence-red-review.log",
+      "exists": true,
+      "sha256": "517daa5c46fb2e35716c756da060d97afd0d777fdcbee67cb417cdf3424eab2b"
+    },
+    {
+      "path": "evidence/logs/evidence-validation-final.log",
+      "exists": true,
+      "sha256": "d4eb85a76954dc19feb47320d6c37f4ec8ea1673dd26370bf03ded0ae3bcaf68"
+    },
+    {
+      "path": "evidence/logs/evidence-validation-first.log",
+      "exists": true,
+      "sha256": "49c334e25595fd9d57d2226418224c3a108991c466449566d80cd4bdde016ed4"
+    },
+    {
+      "path": "evidence/playwright-results.json",
+      "exists": true,
+      "sha256": "2c00677c9c3ea544d990ba7794435a64efb1dc27f2ac1a8951bc01c279b7546e"
+    },
+    {
+      "path": "evidence/preview-desktop.png",
+      "exists": true,
+      "sha256": "1d689493f943da53fad6ce0527c4d8bbdffbc873ca121f74e97dc54e10594663"
+    },
+    {
+      "path": "evidence/preview-mobile.png",
+      "exists": true,
+      "sha256": "5a822a5829746f6f6503c20811086d4491131f4ef8c95e6cc5549e7bdbe1a7fc"
+    },
+    {
+      "path": "evidence/screenshot-1024.png",
+      "exists": true,
+      "sha256": "c04fe81afdcafbf8fa2b88da8be4337db8b6aae37454f3da319681f4ad72b48a"
+    },
+    {
+      "path": "evidence/screenshot-1440.png",
+      "exists": true,
+      "sha256": "b651bbfe53ddb0851d729dcb29255611ca785317121398223c3fb8530142532c"
+    },
+    {
+      "path": "evidence/screenshot-320.png",
+      "exists": true,
+      "sha256": "ed185907a82f1277a994cb9c1218b07ab2326959fea557665aec49d1076d8d8d"
+    },
+    {
+      "path": "evidence/screenshot-375.png",
+      "exists": true,
+      "sha256": "2618d8eb4988ff9a186de331d0e8d8757e08da688515a0b773e44ff9a88845c3"
+    },
+    {
+      "path": "evidence/screenshot-390.png",
+      "exists": true,
+      "sha256": "d286cb352e63d536f11a540f29403af2d28412271c19c4790947112a4bfdbf80"
+    },
+    {
+      "path": "evidence/screenshot-430.png",
+      "exists": true,
+      "sha256": "748464eb8d5b0f2118d1f24876db12b4ce875f60ad61e81be34f0e0429133342"
+    },
+    {
+      "path": "evidence/screenshot-768.png",
+      "exists": true,
+      "sha256": "a9266c7a3f139135ced1a5829d18b3d25c8a99710e16391d6cfa939a80cb8ed8"
+    },
+    {
+      "path": "index.html",
+      "exists": true,
+      "sha256": "1e738eb096eec6a7c7a40da2b54e320b5cd6a19a9800252cd217a6d47e0904c0"
+    },
+    {
+      "path": "package-lock.json",
+      "exists": true,
+      "sha256": "b58a3ee1a46066cedf78f74a683eae3151eb09c3adb54282c6b3c096fd0c9771"
+    },
+    {
+      "path": "package.json",
+      "exists": true,
+      "sha256": "82ed4ff54431a126b69fce2821826761abaef064238924193856d025fe5656ad"
+    },
+    {
+      "path": "playwright.config.cjs",
+      "exists": true,
+      "sha256": "d495d1a60e7e7d2f597ff63c8022fd8ea27c05d458862777a304cc5859148a86"
+    },
+    {
+      "path": "scripts/check-external-links.cjs",
+      "exists": true,
+      "sha256": "4a9f0873e35c31118e17d9f0fc4e1d7fece83b4c33d01611dd11283ab4ad19b7"
+    },
+    {
+      "path": "scripts/lighthouse.cjs",
+      "exists": true,
+      "sha256": "1cee5c38d40d82178d205cfd5240e093cd06cd56abbbc7a45bf2df313865c648"
+    },
+    {
+      "path": "scripts/optimize-assets.cjs",
+      "exists": true,
+      "sha256": "d9801b1db5fda68eebc9a344669d3c92e2723f61a164f1049142a7a0646d98e6"
+    },
+    {
+      "path": "scripts/serve.cjs",
+      "exists": true,
+      "sha256": "a7c18d57bd25c5ca6c334179a517a6059dfb16b8745fb16c923bdb175142a948"
+    },
+    {
+      "path": "src/fonts/MedievalSharp-OFL.txt",
+      "exists": true,
+      "sha256": "45b1f44d2cb859ea4b7be2f322c57b8ff7be55075c336744e62b5550cd0a97eb"
+    },
+    {
+      "path": "src/fonts/Montserrat-OFL.txt",
+      "exists": true,
+      "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e"
+    },
+    {
+      "path": "src/fonts/README.md",
+      "exists": true,
+      "sha256": "30a49af5561f6ae32e9b53b2d8beb97b553d7607e6856da0957341ce49684929"
+    },
+    {
+      "path": "src/fonts/google-fonts-source.css",
+      "exists": true,
+      "sha256": "76a9a774165ab702271dee5b461fb222f6a3aa03c07cedbd3afaa9748ea2e79d"
+    },
+    {
+      "path": "src/fonts/medievalsharp-latin-400-normal.woff2",
+      "exists": true,
+      "sha256": "5cc53d21f70901c28f8e749b9180d6f25c8395cabac398d5a030ecef3c35393c"
+    },
+    {
+      "path": "src/fonts/montserrat-latin-400-800-normal.woff2",
+      "exists": true,
+      "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879"
+    },
+    {
+      "path": "src/imagens/optimized/barba.webp",
+      "exists": true,
+      "sha256": "47808f9924d9214ccd90fc4db3f387343d3adf2d59a886941facb947a8e59b54"
+    },
+    {
+      "path": "src/imagens/optimized/capa-640.webp",
+      "exists": true,
+      "sha256": "39ff096628262d12c2cac3042e250fd928ed9df996f1df8a573c6130cca659da"
+    },
+    {
+      "path": "src/imagens/optimized/capa-916.webp",
+      "exists": true,
+      "sha256": "8601cb6b175a0eb6e5243fbcc623c0411117e56c20587116f7a6dece341bdac8"
+    },
+    {
+      "path": "src/imagens/optimized/corte-kids.webp",
+      "exists": true,
+      "sha256": "4da8636bd8be23271c3a1a3f4a159fe31b7347ae2ec0c9179609115790cc3d63"
+    },
+    {
+      "path": "src/imagens/optimized/corte.webp",
+      "exists": true,
+      "sha256": "ebe2a795ff7534d9f2809d8cd5bb341334c8db2ce93b9a9e73dde26c280377f4"
+    },
+    {
+      "path": "src/imagens/optimized/foto-jr-360.webp",
+      "exists": true,
+      "sha256": "5caf6c5e1d06067e6160fd24b7369988ca92efb34a7130338f358184372ccd25"
+    },
+    {
+      "path": "src/imagens/optimized/foto-jr-600.webp",
+      "exists": true,
+      "sha256": "90387ddf9fc7501d2a666c7f03e3ec621ca53b503c911677e9e513afab40b708"
+    },
+    {
+      "path": "src/imagens/optimized/logo.webp",
+      "exists": true,
+      "sha256": "24f6d5629a2fef36726666f60fee94dda3f7b798e388d124d1dd2013a17d0ffd"
+    },
+    {
+      "path": "src/imagens/optimized/manifest.json",
+      "exists": true,
+      "sha256": "fed0d6da8afccda5b18defd05b89f0362aa84251bf4d205df3f4ed5d683a1f86"
+    },
+    {
+      "path": "src/imagens/optimized/pigmentacao.webp",
+      "exists": true,
+      "sha256": "a9f7eecfc2102dda7a6d6ac321319c71349bc722c26246a7ed9b9468e5be5ab7"
+    },
+    {
+      "path": "src/imagens/optimized/produtos.webp",
+      "exists": true,
+      "sha256": "a87425d9a84823bb6bd66095c11c888cf52afd3e1ec3fb69d1652759f3716aed"
+    },
+    {
+      "path": "src/imagens/optimized/sobrancelha.webp",
+      "exists": true,
+      "sha256": "bc5602c785cbe33cae6a63576a59323985b31c178d63b5252c9821544b304f61"
+    },
+    {
+      "path": "src/javascript/script.js",
+      "exists": true,
+      "sha256": "75604722b018f97fbf358a2f2996276ce86de747c09c527d4ecc3b5b5e4ca9cf"
+    },
+    {
+      "path": "src/styles/depoimentos.css",
+      "exists": true,
+      "sha256": "692c88ad1052066e71707f7090e556f4654ffe90787bce010ae0d8358de9f1b2"
+    },
+    {
+      "path": "src/styles/depoismentos.css",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "src/styles/footer.css",
+      "exists": true,
+      "sha256": "b747b59f6f19b6f9ba572b864571ff7d7bd761c26a7df1b294484bf3409abb29"
+    },
+    {
+      "path": "src/styles/header.css",
+      "exists": true,
+      "sha256": "d51bde4b5d2f247437228bd0a9189f6ac5ca1a5e19f00a8e00dba00b8516f599"
+    },
+    {
+      "path": "src/styles/home.css",
+      "exists": true,
+      "sha256": "05c2ead1251b090751ac39114f9a4eb1648a7b6aa4e44049e124267ec3fc5178"
+    },
+    {
+      "path": "src/styles/servicos.css",
+      "exists": true,
+      "sha256": "fee7cd59ae8b3c36d1aa7ed123a2f6406027defd227f1771a90decca64ec0b4c"
+    },
+    {
+      "path": "src/styles/sobre.css",
+      "exists": true,
+      "sha256": "c47c1b1ba5da5441c9c6ec1ce0f3cea854a60a6f2f58e2fea6f50e87da637e21"
+    },
+    {
+      "path": "src/styles/styles.css",
+      "exists": true,
+      "sha256": "71bc44028fbc33ebcf9603e881c07fd2827c42900f7be16d1c205174820edbb1"
+    },
+    {
+      "path": "tests/performance.spec.cjs",
+      "exists": true,
+      "sha256": "3403daf3c5b4b545f87f2a247a6883ed6332064d99ba8ba343d0b6f18ca1abb7"
+    },
+    {
+      "path": "tests/review.spec.cjs",
+      "exists": true,
+      "sha256": "80b970759da7e4e0bc6c29f9b40e90b25ffceec3dbf056b3cbf1415a8d7e45e9"
+    },
+    {
+      "path": "tests/site.spec.cjs",
+      "exists": true,
+      "sha256": "ead2771672e91a949c6c42a3817d76772c7c42f38c3b4e8913bbcffdb163e562"
+    },
+    {
+      "path": "tests/validation.spec.cjs",
+      "exists": true,
+      "sha256": "ce36c80ab9ca37392a9f879a31ad2e0f3d30e8c3d001c825102d3e6b38978306"
+    }
+  ]
+}

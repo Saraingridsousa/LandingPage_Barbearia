@@ -1,0 +1,88 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test
+
+
+Running 18 tests using 2 workers
+
+  ok  1 tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real (2.2s)
+  ok  3 tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos (1.7s)
+  ok  2 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 320px (5.5s)
+  ok  4 tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio (1.6s)
+  ok  6 tests\site.spec.cjs:46:1 › menu móvel funciona por teclado, Escape e navegação (1.1s)
+  ok  5 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 375px (4.8s)
+  ok  7 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 390px (4.6s)
+  ok  8 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 430px (4.7s)
+  ok  9 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 768px (5.4s)
+  ok 10 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1024px (6.2s)
+  ok 11 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1440px (6.1s)
+  x  12 tests\validation.spec.cjs:31:1 › links internos, assets e prefixo GitHub Pages resolvem (3.1s)
+  ok 13 tests\validation.spec.cjs:45:1 › sem JavaScript mantém navegação e contato úteis (1.2s)
+  x  14 tests\validation.spec.cjs:55:1 › menu fecha ao sair, redimensionar e foco é visível (1.6s)
+  ok 15 tests\validation.spec.cjs:75:3 › configuração inválida mantém fallback: "+55 32 99982-7807" (2.0s)
+  ok 16 tests\validation.spec.cjs:75:3 › configuração inválida mantém fallback: "javascript:alert(1)" (1.5s)
+  ok 17 tests\validation.spec.cjs:75:3 › configuração inválida mantém fallback: 123 (1.4s)
+  ok 18 tests\validation.spec.cjs:75:3 › configuração inválida mantém fallback: {} (1.7s)
+
+
+  1) tests\validation.spec.cjs:31:1 › links internos, assets e prefixo GitHub Pages resolvem ───────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 4
+
+    - Array []
+    + Array [
+    +   "http://127.0.0.1:4173/LandingPage_Barbearia/src/fonts/montserrat-latin.woff2",
+    +   "http://127.0.0.1:4173/LandingPage_Barbearia/src/fonts/medievalsharp-latin.woff2",
+    + ]
+
+      40 |   const unsafe = await page.locator('a[target="_blank"]').evaluateAll(links => links.filter(a => !a.relList.contains('noopener') || !a.relList.contains('noreferrer')).map(a => a.href));
+      41 |   expect(unsafe).toEqual([]);
+    > 42 |   expect(missing).toEqual([]);
+         |                   ^
+      43 | });
+      44 |
+      45 | test('sem JavaScript mantém navegação e contato úteis', async ({ browser }) => {
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\validation.spec.cjs:42:19
+
+    Error Context: test-results\validation-links-internos--40861-efixo-GitHub-Pages-resolvem\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\validation-links-internos--40861-efixo-GitHub-Pages-resolvem\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\validation-links-internos--40861-efixo-GitHub-Pages-resolvem\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\validation.spec.cjs:55:1 › menu fecha ao sair, redimensionar e foco é visível ───────────
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "none"
+
+      67 |   await expect(page.locator('#nav_list')).toBeHidden();
+      68 |   await toggle.focus();
+    > 69 |   expect(await toggle.evaluate(e => getComputedStyle(e).outlineStyle)).not.toBe('none');
+         |                                                                            ^
+      70 |   await page.emulateMedia({ reducedMotion: 'reduce' });
+      71 |   expect(await page.locator('.button').first().evaluate(e => getComputedStyle(e).transitionDuration)).toBe('0s');
+      72 | });
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\validation.spec.cjs:69:76
+
+    Error Context: test-results\validation-menu-fecha-ao-sair-redimensionar-e-foco-é-visível\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\validation-menu-fecha-ao-sair-redimensionar-e-foco-é-visível\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\validation-menu-fecha-ao-sair-redimensionar-e-foco-é-visível\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests\validation.spec.cjs:31:1 › links internos, assets e prefixo GitHub Pages resolvem ────────
+    tests\validation.spec.cjs:55:1 › menu fecha ao sair, redimensionar e foco é visível ────────────
+  16 passed (1.0m)

@@ -1,0 +1,33 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test
+
+
+Running 24 tests using 2 workers
+
+  ok  1 tests\performance.spec.cjs:2:1 › menu não desloca conteúdo ao carregar JavaScript atrasado (1.4s)
+  ok  2 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: null (5.2s)
+  ok  3 tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real (3.7s)
+  ok  4 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: [] (1.9s)
+  ok  5 tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos (1.9s)
+  ok  6 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: "invalid" (1.7s)
+  ok  7 tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio (1.7s)
+  ok  9 tests\site.spec.cjs:46:1 › menu móvel funciona por teclado, Escape e navegação (1.3s)
+  ok  8 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: {malformed (1.7s)
+  ok 11 tests\review.spec.cjs:19:1 › menu aberto acessível e link ativado somente com teclado (4.3s)
+  ok 10 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 320px (5.2s)
+  ok 12 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 375px (4.9s)
+  ok 13 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 390px (5.3s)
+  ok 14 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 430px (4.7s)
+  ok 15 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 768px (6.6s)
+  ok 16 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1024px (7.1s)
+  ok 17 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1440px (6.9s)
+  ok 18 tests\validation.spec.cjs:31:1 › links internos, assets e prefixo GitHub Pages resolvem (5.5s)
+  ok 19 tests\validation.spec.cjs:45:1 › sem JavaScript mantém navegação e contato úteis (1.4s)
+  ok 20 tests\validation.spec.cjs:55:1 › menu fecha ao sair, redimensionar e foco é visível (1.3s)
+  ok 21 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: "+55 32 99982-7807" (717ms)
+  ok 22 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: "javascript:alert(1)" (614ms)
+  ok 23 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: 123 (600ms)
+  ok 24 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: {} (625ms)
+
+  24 passed (1.1m)

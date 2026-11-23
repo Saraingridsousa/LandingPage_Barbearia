@@ -1,0 +1,6 @@
+node_modules/
+test-results/
+playwright-report/
+graphify-out/
+evidence/*.html
+evidence/*-raw.json

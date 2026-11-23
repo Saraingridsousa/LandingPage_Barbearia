@@ -1,0 +1,42 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test
+
+
+Running 4 tests using 1 worker
+
+  ok 1 tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real (2.5s)
+  ok 2 tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos (2.0s)
+  x  3 tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio (2.5s)
+  ok 4 tests\site.spec.cjs:46:1 › menu móvel funciona por teclado, Escape e navegação (1.3s)
+
+
+  1) tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "https://wa.me/5511999999999"
+    Received: "http://127.0.0.1:4173/index.html"
+
+      37 |   for (const item of urls) {
+      38 |     const url = new URL(item.href);
+    > 39 |     expect(url.origin + url.pathname).toBe('https://wa.me/5511999999999');
+         |                                       ^
+      40 |     expect(url.searchParams.get('text')).toContain(item.service || 'horário');
+      41 |   }
+      42 |   await expect(page.locator('#contact-primary')).toHaveAttribute('href', /wa.me\/5511999999999/);
+        at C:\Users\sarai\Projects\LandingPage_Barbearia\tests\site.spec.cjs:39:39
+
+    Error Context: test-results\site-configuração-confirma-796b7--codifica-serviço-sem-envio\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-configuração-confirma-796b7--codifica-serviço-sem-envio\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-configuração-confirma-796b7--codifica-serviço-sem-envio\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio 
+  3 passed (15.3s)

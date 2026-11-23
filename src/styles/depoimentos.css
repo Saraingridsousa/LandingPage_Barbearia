@@ -1,0 +1,5 @@
+#depoimentos { background: var(--surface); border-block: 1px solid var(--border); }
+.testimonial-layout { display: grid; gap: 28px; }
+.testimonial-layout > div > p:not(.eyebrow) { color: var(--muted); font-size: .95rem; max-width: 48ch; }
+.testimonial-layout .text-link { margin-top: 16px; }
+@media (min-width: 768px) { .testimonial-layout { grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; } }

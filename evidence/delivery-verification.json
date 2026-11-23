@@ -1,0 +1,19 @@
+{
+  "scope": "Entrega local das melhorias seguras solicitadas, sem publicação, ativação de contato não confirmado ou avaliações inventadas",
+  "baseline": "9822f22508b9841a980b3b3bb6c51cafd3d4ab3b",
+  "branch": "refactor/landing-page-v2",
+  "criteria": [
+    {"id":"NAV","status":"verified","evidence":"npm test: exit 0; 24 testes; menu, teclado, foco, Escape e sem JS exercitados. evidence/playwright-results.json"},
+    {"id":"CONTACT","status":"verified","evidence":"Fallback Instagram e fixtures de número confirmado/JSON inválido testados; contato real permanece null. tests/site.spec.cjs e tests/review.spec.cjs"},
+    {"id":"CONTENT","status":"verified","evidence":"Seis serviços, biografia preservada; imagem inadequada fora da vitrine; hashes originais conferidos. src/imagens/optimized/manifest.json"},
+    {"id":"UI","status":"verified","evidence":"Sete larguras requeridas, screenshots e asserts de overflow/alvos/seções. evidence/screenshot-*.png"},
+    {"id":"A11Y","status":"verified","evidence":"Axe sem violações nas regras A/AA selecionadas, menu aberto/fechado, teclado e reduced-motion. Não equivale a certificação manual completa."},
+    {"id":"SEO","status":"verified","evidence":"HTML validado exit 0, testes de metadados e Lighthouse SEO 100. evidence/logs/evidence-html-final.log e evidence/lighthouse-summary.json"},
+    {"id":"PERF","status":"verified","evidence":"Lighthouse real isolado exit 0: 98 mobile / 100 desktop, CLS 0. Dados locais de laboratório, sem INP/CrUX de campo."},
+    {"id":"LINKS","status":"verified","evidence":"Teste de âncoras/assets/prefixo Pages aprovado; quatro destinos externos HTTP 200, sem mensagens. evidence/external-links.json"},
+    {"id":"DOCS","status":"verified","evidence":"README e docs/IMPLEMENTATION.md atualizados com instruções, decisões, resultados, limites e pendências do cliente."}
+  ],
+  "pending": [],
+  "client_confirmation_outside_safe_scope": ["WhatsApp correto e titularidade", "Atualidade de endereço e biografia", "Avaliações autênticas autorizadas", "Autorização separada para merge/deploy"],
+  "limitations": ["Chromium apenas; sem auditoria manual integral com leitor de tela/Safari/Firefox", "Sem publicação ou medição de campo", "HTTP 200 não prova identidade/titularidade", "Graphify não cobre CSS/HTML e não extraiu símbolos das IIFEs do script final"]
+}

@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "command": "node scripts/optimize-assets.cjs",
+  "renderer": "Playwright Chromium; original SVG file URLs; omitBackground: true; deviceScaleFactor: 1",
+  "encoding": "Pillow WebP method=6; photos quality=90; service icons and logo lossless",
+  "originals": {
+    "Barba.svg": "4992b91d7e420b18bab85c3fce18b8b1d876003ac39b1b16854db923d0ca82c6",
+    "Corte.svg": "d482ff1805ba7617127c64f06fff93cf224107ecb05455d65b889a7db9aa9bec",
+    "Corte_Kids.svg": "9aeb3b943e9ea8a29990b140439a6dd4f1c84b2d18e8c97e4fea79c6a31f61af",
+    "Minicurso.svg": "bc7f98aa14915016b2addfa3dec74117eef1aa0ca2e190c6927ff5b0c2efb13a",
+    "Pigmentação.svg": "90ae7c83020836483bf32d37290c84244dd5aaf8a080f79c2a97b63d08a4e6e0",
+    "Produtos.svg": "9051a012ffb19b46a9d7e5ab2217b3e5527d195361fb99000a8d46c90bc1c654",
+    "Sobrancelha.svg": "40f49d5d94441caed90ff7d19d7a655586368ff507aa06ebc8a7d976a05bc3f9",
+    "capa.svg": "3bded39d62b53ee9a2dc4fee32ab1a36dfb035d112c7dade4059c95f2b3b6a2b",
+    "capa_grande.svg": "af53a7e4077997f234893c5f4046caa80bc70a756eac6d09b977fef062316714",
+    "capa_media.svg": "124063f00bfd6dd2655ea589c83cea3db937338c19f4c4760efa30b5564689e5",
+    "capa_pequena.svg": "c9be09aa0b04faeca1738d8d5b0c8cfb7efc3bdc01b17badf6e41f0fcb38d519",
+    "foto_jr.svg": "651cf649f2ba1880cde017f40a181f867033358d9b7e393f1f5946803c8e558f",
+    "imagem_carrossel.jpg": "52ebfd0b645f6f785de2a984e9abc8177f746b68746dcacfd6699d32502bead8",
+    "logo.png": "854bdf94e044467ddda86860f2c9ef7a19124eaa9edfdccf64496394406b2c96"
+  },
+  "images": [
+    {
+      "source": "src/imagens/capa.svg",
+      "file": "src/imagens/optimized/capa-916.webp",
+      "width": 916,
+      "height": 785,
+      "mode": "RGB",
+      "format": "WEBP",
+      "bytes": 33950,
+      "sourceBytes": 858060,
+      "sha256": "8601cb6b175a0eb6e5243fbcc623c0411117e56c20587116f7a6dece341bdac8",
+      "lossless": false
+    },
+    {
+      "source": "src/imagens/capa.svg",
+      "file": "src/imagens/optimized/capa-640.webp",
+      "width": 640,
+      "height": 548,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 20774,
+      "sourceBytes": 858060,
+      "sha256": "39ff096628262d12c2cac3042e250fd928ed9df996f1df8a573c6130cca659da",
+      "lossless": false
+    },
+    {
+      "source": "src/imagens/foto_jr.svg",
+      "file": "src/imagens/optimized/foto-jr-600.webp",
+      "width": 600,
+      "height": 801,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 71634,
+      "sourceBytes": 162836,
+      "sha256": "90387ddf9fc7501d2a666c7f03e3ec621ca53b503c911677e9e513afab40b708",
+      "lossless": false
+    },
+    {
+      "source": "src/imagens/foto_jr.svg",
+      "file": "src/imagens/optimized/foto-jr-360.webp",
+      "width": 360,
+      "height": 480,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 33092,
+      "sourceBytes": 162836,
+      "sha256": "5caf6c5e1d06067e6160fd24b7369988ca92efb34a7130338f358184372ccd25",
+      "lossless": false
+    },
+    {
+      "source": "src/imagens/Corte.svg",
+      "file": "src/imagens/optimized/corte.webp",
+      "width": 225,
+      "height": 226,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 22028,
+      "sourceBytes": 136598,
+      "sha256": "ebe2a795ff7534d9f2809d8cd5bb341334c8db2ce93b9a9e73dde26c280377f4",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/Barba.svg",
+      "file": "src/imagens/optimized/barba.webp",
+      "width": 231,
+      "height": 242,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 28390,
+      "sourceBytes": 183599,
+      "sha256": "47808f9924d9214ccd90fc4db3f387343d3adf2d59a886941facb947a8e59b54",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/Corte_Kids.svg",
+      "file": "src/imagens/optimized/corte-kids.webp",
+      "width": 243,
+      "height": 238,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 20980,
+      "sourceBytes": 125729,
+      "sha256": "4da8636bd8be23271c3a1a3f4a159fe31b7347ae2ec0c9179609115790cc3d63",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/Sobrancelha.svg",
+      "file": "src/imagens/optimized/sobrancelha.webp",
+      "width": 275,
+      "height": 238,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 17874,
+      "sourceBytes": 98557,
+      "sha256": "bc5602c785cbe33cae6a63576a59323985b31c178d63b5252c9821544b304f61",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/Pigmentação.svg",
+      "file": "src/imagens/optimized/pigmentacao.webp",
+      "width": 271,
+      "height": 237,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 21178,
+      "sourceBytes": 137019,
+      "sha256": "a9f7eecfc2102dda7a6d6ac321319c71349bc722c26246a7ed9b9468e5be5ab7",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/Produtos.svg",
+      "file": "src/imagens/optimized/produtos.webp",
+      "width": 234,
+      "height": 277,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 15518,
+      "sourceBytes": 97787,
+      "sha256": "a87425d9a84823bb6bd66095c11c888cf52afd3e1ec3fb69d1652759f3716aed",
+      "lossless": true
+    },
+    {
+      "source": "src/imagens/logo.png",
+      "file": "src/imagens/optimized/logo.webp",
+      "width": 196,
+      "height": 196,
+      "mode": "RGBA",
+      "format": "WEBP",
+      "bytes": 15632,
+      "sourceBytes": 25807,
+      "sha256": "24f6d5629a2fef36726666f60fee94dda3f7b798e388d124d1dd2013a17d0ffd",
+      "lossless": true
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Montserrat",
+      "style": "normal",
+      "subset": "latin",
+      "weights": "400 800",
+      "file": "src/fonts/montserrat-latin-400-800-normal.woff2",
+      "bytes": 37956,
+      "sha256": "06b16db7a969135d48d38c49183be7fb88d4452e2a3011957c7851941f4e4879",
+      "sourceCss": "https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:wght@400..800&display=swap",
+      "sourceUrl": "https://fonts.gstatic.com/s/montserrat/v31/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2",
+      "license": "src/fonts/Montserrat-OFL.txt",
+      "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/montserrat/OFL.txt"
+    },
+    {
+      "family": "MedievalSharp",
+      "style": "normal",
+      "subset": "latin",
+      "weights": "400",
+      "file": "src/fonts/medievalsharp-latin-400-normal.woff2",
+      "bytes": 38788,
+      "sha256": "5cc53d21f70901c28f8e749b9180d6f25c8395cabac398d5a030ecef3c35393c",
+      "sourceCss": "https://fonts.googleapis.com/css2?family=MedievalSharp&family=Montserrat:wght@400..800&display=swap",
+      "sourceUrl": "https://fonts.gstatic.com/s/medievalsharp/v28/EvOJzAlL3oU5AQl2mP5KdgptMqhwMg.woff2",
+      "license": "src/fonts/MedievalSharp-OFL.txt",
+      "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/medievalsharp/OFL.txt"
+    }
+  ],
+  "verification": {
+    "originalsUntouched": true,
+    "imagesDecodedByPillow": true,
+    "imageCount": 11,
+    "fontCount": 2,
+    "woff2SignaturesValid": true
+  }
+}

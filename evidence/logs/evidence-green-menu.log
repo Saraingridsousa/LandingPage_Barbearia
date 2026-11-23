@@ -1,0 +1,10 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test --grep menu móvel
+
+
+Running 1 test using 1 worker
+
+  ok 1 tests\site.spec.cjs:3:1 › menu móvel funciona por teclado, Escape e navegação (2.9s)
+
+  1 passed (7.0s)

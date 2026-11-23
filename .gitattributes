@@ -1,0 +1,4 @@
+# Preserve captured output and upstream license text verbatim.
+# Authored source retains Git's normal whitespace checks.
+evidence/logs/*.log -text -whitespace
+src/fonts/*-OFL.txt -text -whitespace
