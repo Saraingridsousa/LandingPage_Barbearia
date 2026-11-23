@@ -91,7 +91,10 @@ Grafo inicial extraído fora do repositório: 15 nós / 30 arestas; consulta `se
 ### Aceitação e limites
 NAV, CONTACT (implementação segura com fallback), CONTENT, UI, A11Y (escopo automatizado), SEO, PERF (laboratório), LINKS e DOCS: verificados com os limites acima. Ativação WhatsApp real, avaliações publicáveis, atualidade operacional e publicação permanecem pendentes de decisões do cliente, não foram declaradas concluídas. Endereço validado por concordância do conteúdo e embed da fonte, não por confirmação independente do estabelecimento.
 
+### Integração posterior autorizada
+Sara autorizou posteriormente integrar a branch de refatoração à `main`. A integração local foi fast-forward do commit `9822f22508b9841a980b3b3bb6c51cafd3d4ab3b` para `ee6b63e8cd2f2a8e10c498564d6343ed1ae1c6c4`, sem conflitos ou alteração adicional no código de produção. O envio da `main` e sua igualdade com o remoto serão verificados no encerramento. A implantação automática do GitHub Pages é uma etapa separada; o merge não comprova conclusão do deploy. As pendências de WhatsApp e conteúdo permanecem. A suíte completa foi reexecutada em uma cópia isolada do snapshot integrado: 24 testes aprovados, exit 0, sem modificar as evidências históricas ou o código da pasta OneDrive.
+
 ### Próximos passos e responsáveis
 - Proprietário/Sara: confirmar número e titularidade, endereço e biografia; fornecer avaliações autorizadas.
-- Sara: revisar a branch de refatoração e autorizar eventual merge/deploy separadamente. Commit e push dessa branch foram autorizados no pedido posterior à entrega inicial; a demo atual permanece na versão anterior.
+- Sara: revisar o site após a implantação automática e confirmar as pendências comerciais. Commit, push e integração à `main` foram autorizados em pedidos posteriores à entrega inicial; o resultado da implantação precisa ser verificado separadamente.
 - Desenvolvimento, após autorização: ativar contato confirmado, revisão manual com leitor de tela e em Safari/Firefox; medir novamente na hospedagem real e avaliar métricas de campo. Preços e horários só devem ser incluídos quando fornecidos pelo proprietário.

@@ -5,7 +5,7 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 ## Demo e estado da entrega
 
 - Demo existente: https://saraingridsousa.github.io/LandingPage_Barbearia/
-- Esta refatoração é mantida na branch `refactor/landing-page-v2`. **A demo pública ainda não contém estas alterações.** A branch não foi integrada à `main`; nenhum merge ou deploy foi feito.
+- A refatoração foi integrada à `main`, preservando a branch de origem `refactor/landing-page-v2`. A atualização do site depende da implantação do GitHub Pages; o merge, isoladamente, não comprova que o deploy terminou.
 - Protótipo original: https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0
 
 ## Funcionalidades
@@ -89,5 +89,5 @@ Para regenerar imagens/fontes: `node scripts/optimize-assets.cjs` (requer Chromi
 1. Confirmar WhatsApp correto e titularidade.
 2. Confirmar atualidade do endereço e da biografia (idade de 17 anos mantida da fonte, sem atualização presumida).
 3. Fornecer avaliações autênticas com autorização de publicação; não há avaliações legíveis no material atual.
-4. Autorizar a publicação separadamente. Preços e horários não foram inventados nem adicionados.
+4. Acompanhar a implantação do GitHub Pages após a integração autorizada à `main`. Preços e horários não foram inventados nem adicionados.
 5. Fazer revisão com leitor de tela e Safari/Firefox; verificar cache/compressão e métricas após uma publicação autorizada.
