@@ -1,0 +1,42 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\service-menu.spec.cjs:12:1 › service menu groups the six original services without inventing content
+  1) tests\service-menu.spec.cjs:12:1 › service menu groups the six original services without inventing content 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.service-group')
+    Expected: 2
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.service-group') with timeout 5000ms
+      - waiting for locator('.service-group')
+        13 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      12 | test('service menu groups the six original services without inventing content', async ({ page }) => {
+      13 |   await page.goto('/');
+    > 14 |   await expect(page.locator('.service-group')).toHaveCount(2);
+         |                                                ^
+      15 |   await expect(page.getByRole('heading', { name: 'Cortes e barba', exact: true })).toBeVisible();
+      16 |   await expect(page.getByRole('heading', { name: 'Detalhes e cuidados', exact: true })).toBeVisible();
+      17 |   await expect(page.locator('.service-group .service-card')).toHaveCount(6);
+        at C:\Users\sarai\OneDrive\Documentos\Ladin Page - Jr Do Corte\LandingPage_Barbearia\tests\service-menu.spec.cjs:14:48
+
+    Error Context: test-results\service-menu-service-menu--ba54a-s-without-inventing-content\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\service-menu-service-menu--ba54a-s-without-inventing-content\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\service-menu-service-menu--ba54a-s-without-inventing-content\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\service-menu.spec.cjs:12:1 › service menu groups the six original services without inventing content 

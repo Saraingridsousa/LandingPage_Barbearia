@@ -1,0 +1,4 @@
+
+> jr-do-corte@2.0.0 check:js
+> node --check src/javascript/script.js
+

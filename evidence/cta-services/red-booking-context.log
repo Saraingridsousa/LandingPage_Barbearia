@@ -1,0 +1,40 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\booking-context.spec.cjs:3:1 › service keyboard selection reaches contact and a generic CTA clears old context
+  1) tests\booking-context.spec.cjs:3:1 › service keyboard selection reaches contact and a generic CTA clears old context 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('#booking-selection')
+    Expected: "Serviço de interesse: Pigmentação."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" locator('#booking-selection') with timeout 5000ms
+      - waiting for locator('#booking-selection')
+
+
+       8 |   await page.keyboard.press('Enter');
+       9 |   await expect(page).toHaveURL(/#contato$/);
+    > 10 |   await expect(page.locator('#booking-selection')).toHaveText('Serviço de interesse: Pigmentação.');
+         |                                                    ^
+      11 |   await expect(page.locator('#booking-selection')).toHaveAttribute('aria-live', 'polite');
+      12 |   await expect(page.locator('#contato')).toBeFocused();
+      13 |   await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://instagram.com/josedocorte7');
+        at C:\Users\sarai\OneDrive\Documentos\Ladin Page - Jr Do Corte\LandingPage_Barbearia\tests\booking-context.spec.cjs:10:52
+
+    Error Context: test-results\booking-context-service-ke-29104-eric-CTA-clears-old-context\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\booking-context-service-ke-29104-eric-CTA-clears-old-context\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\booking-context-service-ke-29104-eric-CTA-clears-old-context\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\booking-context.spec.cjs:3:1 › service keyboard selection reaches contact and a generic CTA clears old context 

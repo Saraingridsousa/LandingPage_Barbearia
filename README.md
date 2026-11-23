@@ -10,7 +10,8 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 
 ## Funcionalidades
 
-- Hero com localização e CTA; seis serviços com contato contextual.
+- Hero com endereço completo em Lima Duarte e CTAs com feedback de hover/foco/pressão, sem loops e com movimento reduzido respeitado.
+- Seis serviços originais organizados em dois menus; serviço escolhido visível ao chegar ao contato, com ação adicional para consultar disponibilidade.
 - Menu móvel com teclado, Escape, estados ARIA, fechamento após navegação e foco no destino. Navegação continua disponível sem JavaScript.
 - Biografia e imagens originais, mapa com título acessível e botão de rotas.
 - Contato pelo Instagram existente; integração WhatsApp pronta, mas desativada até confirmação do número.
@@ -43,9 +44,11 @@ node scripts/check-external-links.cjs
 
 `npm test` inicia e encerra seu próprio servidor; pare `npm run serve` antes de executá-lo. Ferramentas de teste são apenas devDependencies.
 
-Última validação: **24 testes Chromium aprovados**, incluindo 320, 375, 390, 430, 768, 1024 e 1440px; axe sem violações nas regras WCAG A/AA selecionadas, com menu fechado e aberto; teclado, fallback sem JS, contatos inválidos e prefixo Pages. Isso não substitui auditoria manual completa com leitores de tela ou testes em Safari/Firefox.
+Última validação: **32 testes Chromium aprovados**, incluindo 320, 375, 390, 430, 768, 1024 e 1440px; axe sem violações nas regras WCAG A/AA selecionadas, com menu fechado e aberto; teclado, fallback sem JS, contatos inválidos e prefixo Pages. Inclui regressões de contraste do CTA em hover/foco/pressionado, movimento reduzido e seleção contextual de serviço. Isso não substitui auditoria manual completa com leitores de tela ou testes em Safari/Firefox. Evidência atual: `evidence/cta-services/playwright-results.json`.
 
-Lighthouse 12.6.1 local: desempenho **98 mobile / 100 desktop** e **100** em acessibilidade, boas práticas e SEO nos dois perfis. CLS 0. São medições de laboratório em uma máquina, não promessa de Core Web Vitals de usuários reais. Resultados detalhados em `evidence/lighthouse-summary.json` e [relatório](docs/IMPLEMENTATION.md).
+Para preservar os relatórios históricos ao repetir a suíte, use `JR_EVIDENCE_DIR=evidence/cta-services npm test` (bash).
+
+Lighthouse 12.6.1 local após esta melhoria: desempenho **93 mobile / 100 desktop** e **100** em acessibilidade, boas práticas e SEO nos dois perfis; LCP móvel ~1,9 s e CLS 0. São medições de laboratório em uma máquina, não promessa de Core Web Vitals de usuários reais. Resultados atuais em `evidence/cta-services/lighthouse-summary.json` e [refinamento de CTA/Serviços](docs/CTA_SERVICES.md). O relatório da primeira versão em `evidence/lighthouse-summary.json` é histórico (98/100), não uma medição nova.
 
 Lighthouse foi usado em uma instalação temporária isolada, pois sua cadeia de dependências apresentou alertas de segurança. Ele **não integra o package.json/lock final**, cujo `npm audit` apresentou zero vulnerabilidades. Para repetir opcionalmente o mesmo experimento, instale-o em uma pasta temporária fora do repositório e execute:
 
@@ -82,7 +85,9 @@ Para regenerar imagens/fontes: `node scripts/optimize-assets.cjs` (requer Chromi
 
 ## Capturas da versão local
 
-[Desktop completo](evidence/screenshot-1440.png) · [Celular 390px](evidence/screenshot-390.png) · [Prévia do hero](evidence/preview-desktop.png)
+[Serviços desktop](evidence/cta-services/services-desktop.png) · [Serviços no celular](evidence/cta-services/services-mobile.png)
+
+As capturas completas em `evidence/screenshot-*.png` documentam a primeira refatoração; as sete larguras da melhoria atual são regeneradas com `JR_EVIDENCE_DIR=evidence/cta-services npm test` e preservadas localmente sem adicionar grandes imagens repetidas ao Git.
 
 ## Pendências antes de publicar
 

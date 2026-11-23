@@ -1,0 +1,8 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+Navbar hover colors: { color: 'rgb(17, 17, 17)', background: 'rgb(251, 202, 115)' } contrast: 12.406727453035439
+
+  1 passed (6.9s)

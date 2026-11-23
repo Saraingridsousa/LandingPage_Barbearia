@@ -4,3 +4,5 @@ playwright-report/
 graphify-out/
 evidence/*.html
 evidence/*-raw.json
+evidence/cta-services/lighthouse-*-raw.json
+evidence/cta-services/screenshot-*.png

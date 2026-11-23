@@ -1,0 +1,32 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\cta-motion.spec.cjs:3:1 › booking buttons respond to pointer and keyboard, respecting reduced motion
+  1) tests\cta-motion.spec.cjs:3:1 › booking buttons respond to pointer and keyboard, respecting reduced motion 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "none"
+
+       9 |   await button.hover();
+      10 |   await page.waitForTimeout(250);
+    > 11 |   expect(await button.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+         |                                                                         ^
+      12 |   expect(await arrow.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+      13 |   await page.mouse.down();
+      14 |   await page.waitForTimeout(250);
+        at C:\Users\sarai\OneDrive\Documentos\Ladin Page - Jr Do Corte\LandingPage_Barbearia\tests\cta-motion.spec.cjs:11:73
+
+    Error Context: test-results\cta-motion-booking-buttons-0026a-d-respecting-reduced-motion\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\cta-motion-booking-buttons-0026a-d-respecting-reduced-motion\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\cta-motion-booking-buttons-0026a-d-respecting-reduced-motion\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\cta-motion.spec.cjs:3:1 › booking buttons respond to pointer and keyboard, respecting reduced motion 

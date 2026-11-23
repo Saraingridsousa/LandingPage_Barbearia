@@ -1,0 +1,11 @@
+
+Running 4 tests using 2 workers
+
+[1/4] tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+[2/4] tests\cta-motion.spec.cjs:3:1 › booking buttons respond to pointer and keyboard, respecting reduced motion
+tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+Navbar hover colors: { color: 'rgb(17, 17, 17)', background: 'rgb(251, 202, 115)' } contrast: 12.406727453035439
+
+[3/4] tests\cta-services.spec.cjs:28:1 › hero address includes Lima Duarte
+[4/4] tests\service-menu.spec.cjs:12:1 › service menu groups the six original services without inventing content
+  4 passed (14.0s)

@@ -1,0 +1,42 @@
+
+> jr-do-corte@2.0.0 test
+> playwright test
+
+
+Running 32 tests using 2 workers
+
+  ok  1 tests\booking-context.spec.cjs:3:1 › service keyboard selection reaches contact and a generic CTA clears old context (2.2s)
+Navbar hover colors: { color: 'rgb(17, 17, 17)', background: 'rgb(251, 202, 115)' } contrast: 12.406727453035439
+  ok  3 tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover (8.3s)
+  ok  2 tests\cta-motion.spec.cjs:3:1 › booking buttons respond to pointer and keyboard, respecting reduced motion (12.3s)
+  ok  5 tests\performance.spec.cjs:2:1 › menu não desloca conteúdo ao carregar JavaScript atrasado (1.2s)
+  ok  6 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: null (809ms)
+  ok  7 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: [] (702ms)
+  ok  4 tests\cta-services.spec.cjs:28:1 › hero address includes Lima Duarte (6.4s)
+  ok  8 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: "invalid" (1.6s)
+  ok 10 tests\review.spec.cjs:5:3 › configuração raiz inválida não causa erro: {malformed (1.6s)
+  ok  9 tests\cta-services.spec.cjs:34:3 › navbar CTA contrast survives every interaction state at 375px (3.8s)
+  ok 11 tests\review.spec.cjs:19:1 › menu aberto acessível e link ativado somente com teclado (4.0s)
+  ok 12 tests\cta-services.spec.cjs:34:3 › navbar CTA contrast survives every interaction state at 1024px (4.4s)
+  ok 13 tests\service-menu.spec.cjs:12:1 › service menu groups the six original services without inventing content (2.6s)
+  ok 15 tests\site.spec.cjs:4:1 › contato pendente não escolhe número e mantém alternativa real (1.6s)
+  ok 14 tests\cta-services.spec.cjs:34:3 › navbar CTA contrast survives every interaction state at 1440px (4.5s)
+  ok 16 tests\site.spec.cjs:12:1 › conteúdo autêntico sem captura indevida e metadados completos (4.1s)
+  ok 18 tests\site.spec.cjs:28:1 › configuração confirmada uniformiza CTAs e codifica serviço sem envio (2.5s)
+  ok 17 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 320px (4.8s)
+  ok 19 tests\site.spec.cjs:46:1 › menu móvel funciona por teclado, Escape e navegação (1.1s)
+  ok 20 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 375px (4.9s)
+  ok 21 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 390px (5.2s)
+  ok 22 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 430px (5.3s)
+  ok 23 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 768px (5.8s)
+  ok 24 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1024px (7.3s)
+  ok 25 tests\validation.spec.cjs:5:3 › layout, alvos e axe em 1440px (6.5s)
+  ok 26 tests\validation.spec.cjs:31:1 › links internos, assets e prefixo GitHub Pages resolvem (3.1s)
+  ok 27 tests\validation.spec.cjs:45:1 › sem JavaScript mantém navegação e contato úteis (982ms)
+  ok 28 tests\validation.spec.cjs:55:1 › menu fecha ao sair, redimensionar e foco é visível (1.3s)
+  ok 29 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: "+55 32 99982-7807" (799ms)
+  ok 30 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: "javascript:alert(1)" (757ms)
+  ok 31 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: 123 (1.9s)
+  ok 32 tests\validation.spec.cjs:76:3 › configuração inválida mantém fallback: {} (2.6s)
+
+  32 passed (1.5m)

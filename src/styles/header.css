@@ -5,8 +5,10 @@
 #btn_mobile { width: 48px; height: 48px; border: 1px solid #777; background: transparent; border-radius: 4px; color: #FFB430; font: inherit; font-size: 1.5rem; cursor: pointer; }
 #nav_list { list-style: none; display: flex; flex-direction: column; width: 100%; gap: 4px; padding-block: 8px; }
 #nav_list a { display: flex; align-items: center; min-height: 48px; padding: 10px 14px; font-size: .85rem; font-weight: 600; color: #fff; }
-#nav_list a:hover { color: #FFB430; }
-#nav_list .button { color: #111; background: #FFB430; justify-content: center; gap: 20px; }
+#nav_list a:not(.button):hover { color: var(--gold); }
+#nav_list .button { color: #111; background: var(--gold); justify-content: center; gap: 20px; }
+#nav_list .button:hover,
+#nav_list .button:focus-visible { color: #111; background: var(--gold-light); }
 [hidden] { display: none !important; }
 @media (max-width: 1023px) { .js #nav_list:not([data-ready]) { display: none; } }
 @media (min-width: 1024px) {

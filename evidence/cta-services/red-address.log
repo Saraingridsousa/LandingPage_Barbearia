@@ -1,0 +1,41 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\cta-services.spec.cjs:28:1 › hero address includes Lima Duarte
+  1) tests\cta-services.spec.cjs:28:1 › hero address includes Lima Duarte ──────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.hero-location')
+    Expected: "Rua Vieira Pinto, 44 · Centro - Lima Duarte"
+    Received: "Rua Vieira Pinto, 44 · Centro"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.hero-location') with timeout 5000ms
+      - waiting for locator('.hero-location')
+        13 × locator resolved to <p class="hero-location">Rua Vieira Pinto, 44 · Centro</p>
+           - unexpected value "Rua Vieira Pinto, 44 · Centro"
+
+
+      28 | test('hero address includes Lima Duarte', async ({ page }) => {
+      29 |   await page.goto('/');
+    > 30 |   await expect(page.locator('.hero-location')).toHaveText('Rua Vieira Pinto, 44 · Centro - Lima Duarte');
+         |                                                ^
+      31 | });
+      32 |
+        at C:\Users\sarai\OneDrive\Documentos\Ladin Page - Jr Do Corte\LandingPage_Barbearia\tests\cta-services.spec.cjs:30:48
+
+    Error Context: test-results\cta-services-hero-address-includes-Lima-Duarte\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\cta-services-hero-address-includes-Lima-Duarte\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\cta-services-hero-address-includes-Lima-Duarte\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\cta-services.spec.cjs:28:1 › hero address includes Lima Duarte ───────────────────────────

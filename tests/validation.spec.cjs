@@ -24,7 +24,7 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
     await testInfo.attach('axe', { body: JSON.stringify({ violations: axe.violations, incomplete: axe.incomplete }, null, 2), contentType: 'application/json' });
     expect(axe.violations).toEqual([]);
     expect(errors).toEqual([]);
-    await page.screenshot({ path: `evidence/screenshot-${width}.png`, fullPage: true });
+    await page.screenshot({ path: `${process.env.JR_EVIDENCE_DIR || 'evidence'}/screenshot-${width}.png`, fullPage: true });
   });
 }
 

@@ -1,0 +1,35 @@
+
+Running 1 test using 1 worker
+
+[1/1] tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover
+Navbar hover colors: { color: 'rgb(255, 180, 48)', background: 'rgb(255, 180, 48)' } contrast: 1
+
+  1) tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover ───────────────
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 4.5
+    Received:    1
+
+      23 |   console.log('Navbar hover colors:', colors, 'contrast:', contrastRatio(colors.color, colors.background));
+      24 |   await page.screenshot({ path: 'evidence/cta-services/navbar-hover-before.png' });
+    > 25 |   expect(contrastRatio(colors.color, colors.background)).toBeGreaterThanOrEqual(4.5);
+         |                                                          ^
+      26 | });
+      27 |
+        at C:\Users\sarai\OneDrive\Documentos\Ladin Page - Jr Do Corte\LandingPage_Barbearia\tests\cta-services.spec.cjs:25:58
+
+    Error Context: test-results\cta-services-navbar-booking-label-stays-readable-on-hover\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\cta-services-navbar-booking-label-stays-readable-on-hover\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\cta-services-navbar-booking-label-stays-readable-on-hover\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\cta-services.spec.cjs:16:1 › navbar booking label stays readable on hover ────────────────

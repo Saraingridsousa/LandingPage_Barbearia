@@ -1,0 +1,33 @@
+const { test, expect } = require('@playwright/test');
+
+test('booking buttons respond to pointer and keyboard, respecting reduced motion', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.goto('/');
+  const button = page.locator('.hero-actions .button');
+  const arrow = button.locator('span[aria-hidden="true"]');
+  await button.hover();
+  await page.waitForTimeout(250);
+  expect(await button.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+  expect(await arrow.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+  await page.mouse.down();
+  await page.waitForTimeout(250);
+  const pressed = await button.evaluate(e => getComputedStyle(e).transform);
+  expect(pressed === 'none' || pressed === 'matrix(1, 0, 0, 1, 0, 0)').toBe(true);
+  await page.mouse.move(5, 5);
+  await page.mouse.up();
+  await page.keyboard.press('Tab');
+  await button.focus();
+  await page.waitForTimeout(250);
+  expect(await button.evaluate(e => e.matches(':hover'))).toBe(false);
+  expect(await button.evaluate(e => getComputedStyle(e).outlineStyle)).not.toBe('none');
+  expect(await button.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+  expect(await arrow.evaluate(e => getComputedStyle(e).transform)).not.toBe('none');
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await button.hover();
+  await page.waitForTimeout(250);
+  expect(await button.evaluate(e => getComputedStyle(e).transform)).toBe('none');
+  expect(await arrow.evaluate(e => getComputedStyle(e).transform)).toBe('none');
+  expect(await button.evaluate(e => getComputedStyle(e).transitionDuration)).toBe('0s');
+  expect(await button.evaluate(e => getComputedStyle(e).animationName)).toBe('none');
+});

@@ -1,0 +1,231 @@
+[
+  {
+    "formFactor": "mobile",
+    "lighthouseVersion": "12.6.1",
+    "fetchTime": "2026-11-23T00:56:38.258Z",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": {
+        "value": 1890,
+        "display": "1.9 s"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "total-blocking-time": {
+        "value": 292,
+        "display": "290 ms"
+      },
+      "first-contentful-paint": {
+        "value": 1140,
+        "display": "1.1 s"
+      },
+      "speed-index": {
+        "value": 1224.1315141646799,
+        "display": "1.2 s"
+      }
+    },
+    "errors": [
+      {
+        "id": "first-contentful-paint",
+        "score": 0.99,
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+      },
+      {
+        "id": "largest-contentful-paint",
+        "score": 0.98,
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+      },
+      {
+        "id": "total-blocking-time",
+        "score": 0.79,
+        "title": "Total Blocking Time",
+        "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)."
+      },
+      {
+        "id": "max-potential-fid",
+        "score": 0.1,
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/)."
+      },
+      {
+        "id": "uses-long-cache-ttl",
+        "score": 0.5,
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
+      },
+      {
+        "id": "render-blocking-resources",
+        "score": 0,
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
+        "id": "modern-image-formats",
+        "score": 0.5,
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
+      },
+      {
+        "id": "uses-text-compression",
+        "score": 0,
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      },
+      {
+        "id": "uses-responsive-images",
+        "score": 0,
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "id": "cache-insight",
+        "score": 0,
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/)."
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "description": "Your first network request is the most important.  Reduce its latency by avoiding redirects, ensuring a fast server response, and enabling text compression."
+      },
+      {
+        "id": "dom-size-insight",
+        "score": 0,
+        "title": "Optimize DOM size",
+        "description": "A large DOM can increase the duration of style calculations and layout reflows, impacting page responsiveness. A large DOM will also increase memory usage. [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/)."
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0,
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load."
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path."
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "formFactor": "desktop",
+    "lighthouseVersion": "12.6.1",
+    "fetchTime": "2026-11-23T00:56:54.753Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "metrics": {
+      "largest-contentful-paint": {
+        "value": 504.8957499999999,
+        "display": "0.5 s"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms"
+      },
+      "first-contentful-paint": {
+        "value": 424.86164999999994,
+        "display": "0.4 s"
+      },
+      "speed-index": {
+        "value": 426.0729862450647,
+        "display": "0.4 s"
+      }
+    },
+    "errors": [
+      {
+        "id": "uses-long-cache-ttl",
+        "score": 0.5,
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/)."
+      },
+      {
+        "id": "render-blocking-resources",
+        "score": 0,
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/)."
+      },
+      {
+        "id": "modern-image-formats",
+        "score": 0.5,
+        "title": "Serve images in next-gen formats",
+        "description": "Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more about modern image formats](https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/)."
+      },
+      {
+        "id": "uses-text-compression",
+        "score": 0,
+        "title": "Enable text compression",
+        "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more about text compression](https://developer.chrome.com/docs/lighthouse/performance/uses-text-compression/)."
+      },
+      {
+        "id": "uses-responsive-images",
+        "score": 0.5,
+        "title": "Properly size images",
+        "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn how to size images](https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/)."
+      },
+      {
+        "id": "cache-insight",
+        "score": 0,
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/)."
+      },
+      {
+        "id": "document-latency-insight",
+        "score": 0.5,
+        "title": "Document request latency",
+        "description": "Your first network request is the most important.  Reduce its latency by avoiding redirects, ensuring a fast server response, and enabling text compression."
+      },
+      {
+        "id": "dom-size-insight",
+        "score": 0,
+        "title": "Optimize DOM size",
+        "description": "A large DOM can increase the duration of style calculations and layout reflows, impacting page responsiveness. A large DOM will also increase memory usage. [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/)."
+      },
+      {
+        "id": "image-delivery-insight",
+        "score": 0.5,
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)"
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "score": 0,
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load."
+      },
+      {
+        "id": "render-blocking-insight",
+        "score": 0,
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path."
+      }
+    ],
+    "warnings": []
+  }
+]
+

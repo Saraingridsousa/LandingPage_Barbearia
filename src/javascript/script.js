@@ -80,3 +80,20 @@
   const status = document.querySelector('#contact-status');
   if (status) status.textContent = 'Consulte a disponibilidade e agende seu horário pelo WhatsApp.';
 })();
+
+// Keep the chosen service visible when booking uses the in-page contact fallback.
+(() => {
+  const selection = document.querySelector('#booking-selection');
+  const contact = document.querySelector('#contato');
+  if (!selection || !contact) return;
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest?.('a[data-booking]');
+    if (!link || link.getAttribute('href') !== '#contato') return;
+    selection.textContent = link.dataset.service
+      ? `Serviço de interesse: ${link.dataset.service}.`
+      : '';
+    contact.setAttribute('tabindex', '-1');
+    contact.focus({ preventScroll: true });
+  });
+})();
