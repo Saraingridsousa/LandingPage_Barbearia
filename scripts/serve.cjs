@@ -7,8 +7,9 @@ http.createServer((req, res) => {
   let pathname;
   try { pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
   catch { res.writeHead(400).end(); return; }
-  const prefix = '/LandingPage_Barbearia/';
-  if (pathname.startsWith(prefix)) pathname = pathname.slice(prefix.length - 1);
+  for (const prefix of ['/Barbershop-landing-page/', '/LandingPage_Barbearia/']) {
+    if (pathname.startsWith(prefix)) { pathname = pathname.slice(prefix.length - 1); break; }
+  }
   const file = path.resolve(root, `.${pathname === '/' ? '/index.html' : pathname}`);
   if (!file.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
   fs.readFile(file, (error, data) => {

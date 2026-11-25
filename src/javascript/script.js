@@ -97,3 +97,31 @@
     contact.focus({ preventScroll: true });
   });
 })();
+
+// Explicit fragment scrolling: preserve the URL, keyboard focus, browser history
+// and the native no-JavaScript fallback. Booking and menu handlers run first.
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.addEventListener('click', (event) => {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+        event.metaKey || event.shiftKey || event.altKey) return;
+    const link = event.target.closest?.('a[href^="#"]');
+    if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+    const hash = link.hash;
+    if (!hash || hash === '#') return;
+    let id;
+    try { id = decodeURIComponent(hash.slice(1)); }
+    catch { return; }
+    const target = document.getElementById(id);
+    if (!target) return;
+    // On restrictive origins, let the original anchor perform navigation.
+    try {
+      if (location.hash !== hash) history.pushState(history.state, '', hash);
+    } catch { return; }
+    event.preventDefault();
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    // Explicit behavior avoids reliance on CSS alone in embedded/mobile browsers.
+    target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  });
+})();

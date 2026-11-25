@@ -32,7 +32,7 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 
 ## Demo e estado da entrega
 
-- URL histórica da demo: https://saraingridsousa.github.io/LandingPage_Barbearia/ (anterior à renomeação; implantação atual não verificada).
+- Demo (GitHub Pages): https://saraingridsousa.github.io/Barbershop-landing-page/
 - A refatoração foi integrada à `main`, preservando a branch de origem `refactor/landing-page-v2`. A atualização do site depende da implantação do GitHub Pages; o merge, isoladamente, não comprova que o deploy terminou.
 - Protótipo original: https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0
 

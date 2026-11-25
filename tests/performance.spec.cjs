@@ -3,7 +3,7 @@ test('menu não desloca conteúdo ao carregar JavaScript atrasado', async ({ pag
   await page.setViewportSize({ width: 390, height: 844 });
   let release;
   const gate = new Promise(resolve => { release = resolve; });
-  await page.route('**/src/javascript/script.js', async route => { await gate; await route.continue(); });
+  await page.route(/\/src\/javascript\/script\.js(?:\?.*)?$/, async route => { await gate; await route.continue(); });
   await page.goto('/', { waitUntil: 'commit' });
   await expect(page.locator('h1')).toBeVisible();
   const before = await page.locator('#content').boundingBox();

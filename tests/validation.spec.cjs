@@ -31,7 +31,7 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
 test('links internos, assets e prefixo GitHub Pages resolvem', async ({ page, request }) => {
   const missing = [];
   page.on('response', response => { if (response.url().startsWith('http://127.0.0.1') && response.status() >= 400) missing.push(response.url()); });
-  await page.goto('/LandingPage_Barbearia/');
+  await page.goto('/Barbershop-landing-page/');
   const brokenAnchors = await page.locator('a[href^="#"]').evaluateAll(links => links.map(a => a.hash).filter(hash => !document.getElementById(decodeURIComponent(hash.slice(1)))));
   expect(brokenAnchors).toEqual([]);
   for (const img of await page.locator('img').all()) await img.scrollIntoViewIfNeeded();

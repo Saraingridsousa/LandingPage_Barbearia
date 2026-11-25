@@ -15,7 +15,7 @@ test('conteúdo autêntico sem captura indevida e metadados completos', async ({
   await expect(page.locator('#depoimentos img, .carousel')).toHaveCount(0);
   await expect(page.locator('h1')).toHaveCount(1);
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Lima Duarte/);
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://saraingridsousa.github.io/LandingPage_Barbearia/');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://saraingridsousa.github.io/Barbershop-landing-page/');
   await expect(page.locator('meta[property="og:image"]')).toHaveCount(1);
   const business = await page.locator('script[type="application/ld+json"]').evaluate(el => JSON.parse(el.textContent));
   expect(business['@type']).toBe('LocalBusiness');

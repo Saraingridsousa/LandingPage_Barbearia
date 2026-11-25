@@ -28,22 +28,38 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
 }
 
 for (const width of [390, 1440]) {
-  test(`native anchors reach their destination at ${width}px`, async ({ page }) => {
+  test(`smooth anchors reach their destination at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 844 });
     await page.emulateMedia({ reducedMotion: 'no-preference' });
     await page.goto('/');
     await page.evaluate(() => document.fonts.ready);
     await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'smooth');
+    await page.evaluate(() => {
+      window.__scrollPositions = [];
+      window.addEventListener('scroll', () => window.__scrollPositions.push(window.scrollY), { passive: true });
+    });
     if (width < 1024) await page.locator('#btn_mobile').click();
     await page.locator('#nav_list a[href="#sobre"]').click();
     await expect(page).toHaveURL(/#sobre$/);
     await expect(page.locator('#sobre')).toBeFocused();
     await expect.poll(() => page.locator('#sobre').evaluate(e => Math.abs(e.getBoundingClientRect().top - 24))).toBeLessThan(3);
+    expect(await page.evaluate(() => new Set(window.__scrollPositions).size)).toBeGreaterThan(2);
     await page.goto('/');
     await page.locator('.hero-actions .text-link').click();
     await expect.poll(() => page.evaluate(() => decodeURIComponent(location.hash))).toBe('#serviços');
     await expect.poll(() => page.locator('#serviços').evaluate(e => Math.abs(e.getBoundingClientRect().top - 24))).toBeLessThan(3);
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'auto');
+    await page.locator('.footer-bottom a[href="#home"]').click();
+    await expect(page).toHaveURL(/#home$/);
+    await expect.poll(() => page.locator('#home').evaluate(e => Math.abs(e.getBoundingClientRect().top - 24))).toBeLessThan(3);
   });
 }
+
+test('release assets are versioned and the canonical points to the renamed Pages site', async ({ page }) => {
+  await page.goto('/Barbershop-landing-page/');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://saraingridsousa.github.io/Barbershop-landing-page/');
+  const assets = await page.locator('link[rel="stylesheet"], script[src]').evaluateAll(elements => elements.map(e => new URL(e.href || e.src).searchParams.get('v')));
+  expect(assets.length).toBeGreaterThan(2);
+  expect(assets.every(Boolean)).toBe(true);
+});
