@@ -41,7 +41,7 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 - Hero com endereço completo em Lima Duarte e CTAs com feedback de hover/foco/pressão, sem loops e com movimento reduzido respeitado.
 - Seis serviços originais organizados em dois menus; links diretos de agendamento no WhatsApp e ação adicional para consultar disponibilidade.
 - Menu móvel com teclado, Escape, estados ARIA, fechamento após navegação e foco no destino. Navegação continua disponível sem JavaScript.
-- Biografia e imagens originais, mapa com título acessível e botão de rotas.
+- Biografia com idade calculada automaticamente na abertura da página, imagens originais, mapa com título acessível e botão de rotas.
 - Atalho flutuante dourado com o símbolo do WhatsApp e links diretos de agendamento confirmados; Instagram continua disponível.
 - Sem avaliações fictícias: a captura de downloads do WhatsApp, antes repetida como depoimento, foi retirada da vitrine; o arquivo original foi preservado.
 - Layout mobile-first, foco visível, alvos de toque de pelo menos 44px e suporte a movimento reduzido.
@@ -116,7 +116,7 @@ As capturas completas em `evidence/screenshot-*.png` documentam a primeira refat
 
 ## Pendências antes de publicar
 
-1. Confirmar atualidade do endereço e da biografia (idade de 17 anos mantida da fonte, sem atualização presumida).
+1. Confirmar atualidade do endereço e das demais informações da biografia; a idade é atualizada automaticamente.
 2. Fornecer avaliações autênticas com autorização de publicação; não há avaliações legíveis no material atual.
 3. Acompanhar a implantação do GitHub Pages após a integração autorizada à `main`. Preços e horários não foram inventados nem adicionados.
 4. Fazer revisão com leitor de tela e Safari/Firefox; verificar cache/compressão e métricas após uma publicação autorizada.

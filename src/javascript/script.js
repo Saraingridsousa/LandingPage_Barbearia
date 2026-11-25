@@ -76,3 +76,18 @@
     target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
   });
 })();
+
+// Keep the biography current without displaying a stale age if JS is disabled.
+(() => {
+  const ageText = document.getElementById('barber-age');
+  if (!ageText) return;
+  const birthYear = 2007;
+  const birthMonth = 10;
+  const birthDay = 26;
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const day = today.getDate();
+  const birthdayPending = month < birthMonth || (month === birthMonth && day < birthDay);
+  const age = today.getFullYear() - birthYear - Number(birthdayPending);
+  if (Number.isInteger(age) && age >= 0) ageText.textContent = `, tenho ${age} anos`;
+})();
