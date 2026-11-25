@@ -1,10 +1,38 @@
-# JR do Corte — Barbearia em Lima Duarte, MG
+<h1 align="center">JR do Corte | Barbershop Landing Page</h1>
+<p align="center">Commercial website • Responsive design • Accessibility • Web performance</p>
+<p align="center"><img src="https://skillicons.dev/icons?i=html,css,js" alt="HTML, CSS, JavaScript" /></p>
+
+---
+
+## Overview
+
+A commercial landing page for a local barbershop in Lima Duarte, Brazil. The project brings together service discovery, contact navigation and a mobile-first experience, with particular attention to accessibility, performance and maintainability.
+
+## Portfolio highlights
+
+| Area | Implementation |
+| --- | --- |
+| Frontend | Responsive static website with vanilla JavaScript |
+| Accessibility | Keyboard navigation, focus states and reduced-motion support |
+| Performance | Optimized WebP assets and locally hosted fonts |
+| Quality | Playwright regression tests and documented Lighthouse measurements |
+
+The existing project documentation records 32 passing Chromium tests and Lighthouse performance scores of 93 (mobile) and 100 (desktop) in local laboratory measurements. These results are historical, not a new audit.
+
+## Preview
+
+<p align="center">
+  <img src="evidence/cta-services/services-desktop.png" alt="Desktop services section" width="65%" />
+  <img src="evidence/cta-services/services-mobile.png" alt="Mobile services section" width="25%" />
+</p>
+
+## Detailed technical documentation (Portuguese)
 
 Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sara Ingrid Sousa**. A versão 2 preserva logo, fotografias, preto/carvão/dourado e as fontes Montserrat e MedievalSharp do projeto original.
 
 ## Demo e estado da entrega
 
-- Demo existente: https://saraingridsousa.github.io/LandingPage_Barbearia/
+- URL histórica da demo: https://saraingridsousa.github.io/LandingPage_Barbearia/ (anterior à renomeação; implantação atual não verificada).
 - A refatoração foi integrada à `main`, preservando a branch de origem `refactor/landing-page-v2`. A atualização do site depende da implantação do GitHub Pages; o merge, isoladamente, não comprova que o deploy terminou.
 - Protótipo original: https://www.figma.com/design/9bp2bKb3GzSPIOKU8YR1ZT/Untitled?node-id=0-1&p=f&t=PybKfsOmMYwlhle9-0
 
@@ -30,7 +58,7 @@ npx playwright install chromium
 npm run serve
 ```
 
-Acesse `http://127.0.0.1:4173`. O servidor é apenas de desenvolvimento, restrito ao loopback. Não há backend nem etapa de build necessária ao GitHub Pages. Preserve caminhos relativos ao publicar sob `/LandingPage_Barbearia/`.
+Acesse `http://127.0.0.1:4173`. O servidor é apenas de desenvolvimento, restrito ao loopback. Não há backend nem etapa de build necessária ao GitHub Pages. Preserve caminhos relativos ao publicar em um subdiretório do GitHub Pages; confira o prefixo após a renomeação.
 
 ## Testes
 
