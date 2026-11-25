@@ -48,7 +48,7 @@ test('sem JavaScript mantém navegação e contato úteis', async ({ browser }) 
   await page.goto('http://127.0.0.1:4173/');
   await expect(page.locator('#nav_list a').first()).toBeVisible();
   await expect(page.locator('#btn_mobile')).toBeHidden();
-  await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://instagram.com/josedocorte7');
+  await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://wa.me/553299827807');
   await context.close();
 });
 
@@ -71,14 +71,3 @@ test('menu fecha ao sair, redimensionar e foco é visível', async ({ page }) =>
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.button').first().evaluate(e => getComputedStyle(e).transitionDuration)).toBe('0s');
 });
-
-for (const badContact of ['"+55 32 99982-7807"', '"javascript:alert(1)"', '123', '{}']) {
-  test(`configuração inválida mantém fallback: ${badContact}`, async ({ page }) => {
-    await page.route('**/index.html', async route => {
-      const response = await route.fetch();
-      await route.fulfill({ response, body: (await response.text()).replace('{"whatsapp":null}', `{"whatsapp":${badContact}}`) });
-    });
-    await page.goto('/index.html');
-    await expect(page.locator('[data-booking]').first()).toHaveAttribute('href', '#contato');
-  });
-}

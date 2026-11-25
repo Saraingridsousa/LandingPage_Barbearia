@@ -22,5 +22,5 @@ test('service menu groups the six original services without inventing content', 
     await expect(row.locator('[data-service]')).toHaveAttribute('data-service', name);
     await expect(row.locator('img')).toHaveAttribute('src', `src/imagens/optimized/${expectedImages[name]}`);
   }
-  await expect(page.locator('.services-booking [data-booking]')).toHaveAttribute('href', '#contato');
+  await expect(page.locator('.services-booking [data-booking]')).toHaveAttribute('href', 'https://wa.me/553299827807');
 });

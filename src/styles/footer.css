@@ -2,7 +2,6 @@
 .contact-layout { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 32px; }
 .contact-layout > div { max-width: 650px; }
 #contact-status { max-width: 60ch; margin-top: 20px; font-size: .9rem; color: var(--muted); }
-.booking-selection:not(:empty) { display: inline-block; margin-top: 20px; padding: 10px 14px; border: 1px solid #715321; border-radius: var(--radius); color: var(--gold); background: #2D1F07; font-size: .85rem; font-weight: 600; }
 .site-footer { padding-top: 44px; background: #111; }
 .footer-inner { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 24px 40px; padding-bottom: 36px; }
 .footer-inner img { width: 88px; height: 88px; }

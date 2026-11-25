@@ -1,21 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 
-for (const config of ['null', '[]', '"invalid"', '{malformed']) {
-  test(`configuração raiz inválida não causa erro: ${config}`, async ({ page }) => {
-    const errors = [];
-    page.on('pageerror', error => errors.push(error.message));
-    await page.route('**/index.html', async route => {
-      const response = await route.fetch();
-      await route.fulfill({ response, body: (await response.text()).replace('{"whatsapp":null}', config) });
-    });
-    await page.goto('/index.html');
-    await expect(page.locator('[data-booking]').first()).toHaveAttribute('href', '#contato');
-    await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://instagram.com/josedocorte7');
-    expect(errors).toEqual([]);
-  });
-}
-
 test('menu aberto acessível e link ativado somente com teclado', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto('/');

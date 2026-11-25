@@ -39,10 +39,10 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 ## Funcionalidades
 
 - Hero com endereço completo em Lima Duarte e CTAs com feedback de hover/foco/pressão, sem loops e com movimento reduzido respeitado.
-- Seis serviços originais organizados em dois menus; serviço escolhido visível ao chegar ao contato, com ação adicional para consultar disponibilidade.
+- Seis serviços originais organizados em dois menus; links diretos de agendamento no WhatsApp e ação adicional para consultar disponibilidade.
 - Menu móvel com teclado, Escape, estados ARIA, fechamento após navegação e foco no destino. Navegação continua disponível sem JavaScript.
 - Biografia e imagens originais, mapa com título acessível e botão de rotas.
-- Atalho flutuante dourado de contato, fixo no canto inferior direito. Enquanto o número de WhatsApp não estiver confirmado, leva à seção de contato; após configuração, abre a conversa com mensagem inicial e exibe o ícone do WhatsApp. Instagram continua disponível.
+- Atalho flutuante dourado com o símbolo do WhatsApp e links diretos de agendamento confirmados; Instagram continua disponível.
 - Sem avaliações fictícias: a captura de downloads do WhatsApp, antes repetida como depoimento, foi retirada da vitrine; o arquivo original foi preservado.
 - Layout mobile-first, foco visível, alvos de toque de pelo menos 44px e suporte a movimento reduzido.
 - Meta description, canonical, Open Graph e LocalBusiness apenas com informações presentes no repositório.
@@ -72,7 +72,7 @@ node scripts/check-external-links.cjs
 
 `npm test` inicia e encerra seu próprio servidor; pare `npm run serve` antes de executá-lo. Ferramentas de teste são apenas devDependencies.
 
-Última validação: **32 testes Chromium aprovados**, incluindo 320, 375, 390, 430, 768, 1024 e 1440px; axe sem violações nas regras WCAG A/AA selecionadas, com menu fechado e aberto; teclado, fallback sem JS, contatos inválidos e prefixo Pages. Inclui regressões de contraste do CTA em hover/foco/pressionado, movimento reduzido e seleção contextual de serviço. Isso não substitui auditoria manual completa com leitores de tela ou testes em Safari/Firefox. Evidência atual: `evidence/cta-services/playwright-results.json`.
+Validação histórica anterior às mudanças de contato: **32 testes Chromium aprovados**, incluindo 320, 375, 390, 430, 768, 1024 e 1440px; axe sem violações nas regras WCAG A/AA selecionadas, com menu fechado e aberto; teclado, fallback sem JS, contatos inválidos e prefixo Pages. Inclui regressões de contraste do CTA em hover/foco/pressionado, movimento reduzido e seleção contextual de serviço. Isso não substitui auditoria manual completa com leitores de tela ou testes em Safari/Firefox. Evidência atual: `evidence/cta-services/playwright-results.json`.
 
 Para preservar os relatórios históricos ao repetir a suíte, use `JR_EVIDENCE_DIR=evidence/cta-services npm test` (bash).
 
@@ -87,21 +87,18 @@ LIGHTHOUSE_ROOT=/caminho/temporario/jr-audit-tools node scripts/lighthouse.cjs
 
 O comando acima usa sintaxe bash; no Windows use caminhos nativos `C:/...`. A ferramenta de auditoria isolada mantém os alertas documentados; não a utilize como dependência do site ou servidor público. O teste normal não precisa dela.
 
-## Configurar WhatsApp — somente após confirmação
+## Contatos oficiais
 
-No `index.html`, encontre `script#business-contact`. O valor publicado permanece:
+- WhatsApp de agendamento: https://wa.me/553299827807 (link confirmado em 25/11/2026).
+- Instagram: https://www.instagram.com/josedocorte7.
 
-```json
-{"whatsapp":null}
-```
-
-O original diverge entre `553299827807` nos CTAs e `5532999827807` no rodapé. **Não escolher por formato ou aparência.** Após o proprietário confirmar número e titularidade, substitua `null` por uma string com DDI e dígitos, sem sinal, espaços ou pontuação. O JavaScript gera todos os links `wa.me` e codifica a mensagem por serviço com `encodeURIComponent`; não envia nenhuma mensagem automaticamente. Com JavaScript desabilitado, o contato pelo Instagram continua disponível.
+Todos os CTAs de atendimento e agendamento usam o link direto no HTML, sem redirecionador do Instagram, parâmetros de rastreamento ou dependência de JavaScript. Links de navegação interna e rotas continuam com seus destinos originais. Nenhuma mensagem é enviada automaticamente.
 
 ## Estrutura
 
 - `index.html`: conteúdo, metadados e configuração de contato.
 - `src/styles/`: tokens e estilos separados por seção; `depoimentos.css` corrige o nome anterior.
-- `src/javascript/script.js`: menu e construção segura dos links.
+- `src/javascript/script.js`: menu e rolagem suave entre seções.
 - `src/imagens/`: acervo original intacto; `optimized/` contém derivados e manifesto com hashes.
 - `src/fonts/`: WOFF2, licenças OFL e origem dos downloads.
 - `scripts/`: servidor, otimização e verificações opcionais.
@@ -119,8 +116,7 @@ As capturas completas em `evidence/screenshot-*.png` documentam a primeira refat
 
 ## Pendências antes de publicar
 
-1. Confirmar WhatsApp correto e titularidade.
-2. Confirmar atualidade do endereço e da biografia (idade de 17 anos mantida da fonte, sem atualização presumida).
-3. Fornecer avaliações autênticas com autorização de publicação; não há avaliações legíveis no material atual.
-4. Acompanhar a implantação do GitHub Pages após a integração autorizada à `main`. Preços e horários não foram inventados nem adicionados.
-5. Fazer revisão com leitor de tela e Safari/Firefox; verificar cache/compressão e métricas após uma publicação autorizada.
+1. Confirmar atualidade do endereço e da biografia (idade de 17 anos mantida da fonte, sem atualização presumida).
+2. Fornecer avaliações autênticas com autorização de publicação; não há avaliações legíveis no material atual.
+3. Acompanhar a implantação do GitHub Pages após a integração autorizada à `main`. Preços e horários não foram inventados nem adicionados.
+4. Fazer revisão com leitor de tela e Safari/Firefox; verificar cache/compressão e métricas após uma publicação autorizada.

@@ -49,64 +49,8 @@
   links.dataset.ready = 'true';
 })();
 
-// A confirmed international number belongs in #business-contact, never inferred here.
-(() => {
-  const config = document.querySelector('#business-contact');
-  if (!config) return;
-  let contact;
-  try { contact = JSON.parse(config.textContent); }
-  catch { return; }
-  if (!contact || typeof contact !== 'object' || Array.isArray(contact)) return;
-  const phone = contact.whatsapp;
-  if (typeof phone !== 'string' || !/^[1-9]\d{7,14}$/.test(phone)) return;
-
-  const bookingURL = (service) => {
-    const message = service
-      ? `Olá! Gostaria de saber mais sobre ${service} na JR do Corte.`
-      : 'Olá! Gostaria de agendar um horário na JR do Corte.';
-    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  };
-  document.querySelectorAll('[data-booking]').forEach((link) => {
-    link.href = bookingURL(link.dataset.service);
-    // Use the current tab: avoids unannounced new windows for booking controls.
-  });
-  const floating = document.querySelector('#floating-contact');
-  if (floating) {
-    floating.dataset.channel = 'whatsapp';
-    floating.setAttribute('aria-label', 'Agendar pelo WhatsApp');
-    floating.title = 'Agendar pelo WhatsApp';
-    floating.querySelector('.floating-contact-label').textContent = 'Agendar pelo WhatsApp';
-  }
-  const primary = document.querySelector('#contact-primary');
-  if (primary) {
-    primary.href = bookingURL();
-    primary.textContent = 'Agendar pelo WhatsApp ↗';
-    primary.removeAttribute('target');
-    primary.removeAttribute('rel');
-  }
-  const status = document.querySelector('#contact-status');
-  if (status) status.textContent = 'Consulte a disponibilidade e agende seu horário pelo WhatsApp.';
-})();
-
-// Keep the chosen service visible when booking uses the in-page contact fallback.
-(() => {
-  const selection = document.querySelector('#booking-selection');
-  const contact = document.querySelector('#contato');
-  if (!selection || !contact) return;
-
-  document.addEventListener('click', (event) => {
-    const link = event.target.closest?.('a[data-booking]');
-    if (!link || link.getAttribute('href') !== '#contato') return;
-    selection.textContent = link.dataset.service
-      ? `Serviço de interesse: ${link.dataset.service}.`
-      : '';
-    contact.setAttribute('tabindex', '-1');
-    contact.focus({ preventScroll: true });
-  });
-})();
-
 // Explicit fragment scrolling: preserve the URL, keyboard focus, browser history
-// and the native no-JavaScript fallback. Booking and menu handlers run first.
+// and the native no-JavaScript fallback. Menu handlers run first; external contact links are untouched.
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   document.addEventListener('click', (event) => {

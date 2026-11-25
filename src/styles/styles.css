@@ -60,9 +60,7 @@ h2 span { display: block; color: var(--gold); }
   transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 .floating-contact svg { flex-shrink: 0; }
-.floating-contact-whatsapp { display: none; }
-.floating-contact[data-channel="whatsapp"] .floating-contact-chat { display: none; }
-.floating-contact[data-channel="whatsapp"] .floating-contact-whatsapp { display: block; }
+.floating-contact-whatsapp { display: block; }
 .floating-contact:is(:hover, :focus-visible) { background: var(--gold-light); box-shadow: 0 6px 24px rgb(0 0 0 / .7); }
 .floating-contact:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .floating-contact-label {
