@@ -70,6 +70,13 @@
     link.href = bookingURL(link.dataset.service);
     // Use the current tab: avoids unannounced new windows for booking controls.
   });
+  const floating = document.querySelector('#floating-contact');
+  if (floating) {
+    floating.dataset.channel = 'whatsapp';
+    floating.setAttribute('aria-label', 'Agendar pelo WhatsApp');
+    floating.title = 'Agendar pelo WhatsApp';
+    floating.querySelector('.floating-contact-label').textContent = 'Agendar pelo WhatsApp';
+  }
   const primary = document.querySelector('#contact-primary');
   if (primary) {
     primary.href = bookingURL();

@@ -42,7 +42,7 @@ Landing page comercial em **HTML, CSS e JavaScript puro**, desenvolvida por **Sa
 - Seis serviços originais organizados em dois menus; serviço escolhido visível ao chegar ao contato, com ação adicional para consultar disponibilidade.
 - Menu móvel com teclado, Escape, estados ARIA, fechamento após navegação e foco no destino. Navegação continua disponível sem JavaScript.
 - Biografia e imagens originais, mapa com título acessível e botão de rotas.
-- Contato pelo Instagram existente; integração WhatsApp pronta, mas desativada até confirmação do número.
+- Atalho flutuante dourado de contato, fixo no canto inferior direito. Enquanto o número de WhatsApp não estiver confirmado, leva à seção de contato; após configuração, abre a conversa com mensagem inicial e exibe o ícone do WhatsApp. Instagram continua disponível.
 - Sem avaliações fictícias: a captura de downloads do WhatsApp, antes repetida como depoimento, foi retirada da vitrine; o arquivo original foi preservado.
 - Layout mobile-first, foco visível, alvos de toque de pelo menos 44px e suporte a movimento reduzido.
 - Meta description, canonical, Open Graph e LocalBusiness apenas com informações presentes no repositório.
