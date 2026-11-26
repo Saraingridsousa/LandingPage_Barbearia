@@ -53,7 +53,9 @@ for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 844 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto('/');
-    const cta = page.locator('#serviços .instagram-cta');
+    const cta = page.locator('#sobre > .instagram-cta');
+    await expect(page.locator('#serviços .instagram-cta')).toHaveCount(0);
+    await expect(page.locator('#sobre > .about-grid + .instagram-cta')).toHaveCount(1);
     const link = cta.getByRole('link', { name: /Conheça nosso trabalho no Instagram/ });
     await expect(link).toHaveAttribute('href', 'https://www.instagram.com/josedocorte7');
     await expect(link).toHaveAttribute('target', '_blank');
