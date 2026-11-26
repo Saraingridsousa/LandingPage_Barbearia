@@ -91,3 +91,17 @@
   const age = today.getFullYear() - birthYear - Number(birthdayPending);
   if (Number.isInteger(age) && age >= 0) ageText.textContent = `, tenho ${age} anos`;
 })();
+
+// Enhance sections once as they enter view; content remains visible without JS.
+(() => {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(({ isIntersecting, target }) => {
+      if (!isIntersecting) return;
+      observer.unobserve(target);
+      if (!motion.matches) target.classList.add('reveal-in');
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.section-heading, .service-card, .services-booking, .about-photo, .about-copy, .testimonial-layout > div, .location-grid > div, .contact-layout > div').forEach(el => observer.observe(el));
+})();
