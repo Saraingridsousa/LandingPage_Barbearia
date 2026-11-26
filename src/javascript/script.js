@@ -103,5 +103,5 @@
       if (!motion.matches) target.classList.add('reveal-in');
     });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.section-heading, .service-card, .services-booking, .about-photo, .about-copy, .testimonial-layout > div, .location-grid > div, .contact-layout > div').forEach(el => observer.observe(el));
+  document.querySelectorAll('.section-heading, .service-card, .services-booking, .instagram-cta, .about-photo, .about-copy, .testimonial-layout > div, .location-grid > div, .contact-layout > div').forEach(el => observer.observe(el));
 })();
