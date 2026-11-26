@@ -57,3 +57,41 @@ h2 { font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 1.04; }
   .reveal-in { animation: editorial-reveal .65s cubic-bezier(.2,.65,.25,1) both; }
   @keyframes editorial-reveal { from { opacity: .72; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
 }
+
+/* Secondary social CTA, distinct from the gold booking buttons. */
+.instagram-cta {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; align-items: center; gap: 26px;
+  margin-top: clamp(28px, 4vw, 48px);
+  padding: clamp(24px, 4.5vw, 58px);
+  background: radial-gradient(ellipse at 100% 10%, #342719, transparent 65%), #100e0c;
+  border: 1px solid #786040; border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+}
+.instagram-cta::before {
+  content: ''; position: absolute; z-index: -1; pointer-events: none;
+  width: 230px; aspect-ratio: 1; right: -110px; top: -135px;
+  border: 1px solid #51402b; border-radius: 55px; transform: rotate(-18deg);
+  box-shadow: 0 0 0 20px #ffffff03, 0 0 0 40px #ffffff03;
+}
+.instagram-copy, .instagram-actions { min-width: 0; }
+.instagram-copy .eyebrow { margin-bottom: 12px; }
+.instagram-copy h3 { font: 400 clamp(2rem, 4vw, 3.4rem)/1.1 Georgia, 'Times New Roman', serif; letter-spacing: -.04em; }
+.instagram-copy h3 span { color: var(--gold-light); }
+.instagram-copy > p:last-child { color: var(--muted); font-size: .9rem; margin-top: 16px; max-width: 48ch; }
+.instagram-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.instagram-link { gap: 12px; max-width: 100%; min-height: 52px; }
+.instagram-icon { flex-shrink: 0; }
+.instagram-actions p { font-size: .75rem; color: var(--muted); letter-spacing: .05em; }
+@media (min-width: 768px) {
+  .instagram-cta { grid-template-columns: minmax(0, 1fr) auto; }
+  .instagram-actions { align-items: center; }
+}
+@media (max-width: 374px) {
+  .instagram-cta { padding: 20px 16px; }
+  .instagram-link { gap: 8px; padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .instagram-icon { transition: transform .25s ease; }
+  .instagram-link:is(:hover, :focus-visible) .instagram-icon { transform: rotate(-8deg) scale(1.08); }
+}

@@ -8,7 +8,7 @@ test('all booking links point to confirmed WhatsApp, Instagram links stay separa
   expect(links.every(href => href === 'https://wa.me/553299827807')).toBe(true);
   await expect(page.locator('#contact-primary')).toHaveAttribute('href', 'https://wa.me/553299827807');
   await expect(page.locator('#contact-status')).toContainText('WhatsApp');
-  await expect(page.locator('a[href="https://www.instagram.com/josedocorte7"]')).toHaveCount(2);
+  await expect(page.locator('a[href="https://www.instagram.com/josedocorte7"]')).toHaveCount(3);
 });
 
 test('conteúdo autêntico sem captura indevida e metadados completos', async ({ page }) => {
@@ -47,3 +47,27 @@ test('menu móvel funciona por teclado, Escape e navegação', async ({ page }) 
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
   await expect(page.locator('#sobre')).toBeFocused();
 });
+
+for (const width of [320, 390, 768, 1440]) {
+  test(`Instagram CTA is accessible and responsive at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/');
+    const cta = page.locator('#serviços .instagram-cta');
+    const link = cta.getByRole('link', { name: /Conheça nosso trabalho no Instagram/ });
+    await expect(link).toHaveAttribute('href', 'https://www.instagram.com/josedocorte7');
+    await expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(link).not.toHaveAttribute('data-booking', /.+/);
+    await expect(link.locator('svg')).toBeVisible();
+    await link.scrollIntoViewIfNeeded();
+    const bounds = await link.boundingBox();
+    expect(bounds.width).toBeGreaterThanOrEqual(44);
+    expect(bounds.height).toBeGreaterThanOrEqual(44);
+    expect(bounds.x).toBeGreaterThanOrEqual(0);
+    expect(bounds.x + bounds.width).toBeLessThanOrEqual(width);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    await link.focus();
+    await expect(link).toBeFocused();
+  });
+}
