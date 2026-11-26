@@ -12,17 +12,13 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
     await expect.poll(() => photo.evaluate(img => img.complete && img.naturalWidth > 0)).toBe(true);
     const imageRect = await banner.boundingBox();
     const titleRect = await title.boundingBox();
-    if (width < 768) {
-      expect(imageRect.y).toBeLessThanOrEqual(titleRect.y);
-      expect(imageRect.y + imageRect.height).toBeGreaterThan(titleRect.y + titleRect.height);
-      expect(imageRect.width).toBeCloseTo(width, 0);
-      await expect(banner).toHaveCSS('position', 'absolute');
-      await expect(photo).toHaveCSS('object-fit', 'cover');
-      await expect(page.locator('.hero-actions .button')).toBeInViewport();
-    } else {
-      expect(imageRect.x).toBeGreaterThanOrEqual(titleRect.x + titleRect.width - 1);
-      await expect(banner).not.toHaveCSS('position', 'absolute');
-    }
+    // The photograph is now a full-bleed layer at every breakpoint.
+    expect(imageRect.y).toBeLessThanOrEqual(titleRect.y);
+    expect(imageRect.y + imageRect.height).toBeGreaterThan(titleRect.y + titleRect.height);
+    expect(imageRect.width).toBeCloseTo(width, 0);
+    await expect(banner).toHaveCSS('position', 'absolute');
+    await expect(photo).toHaveCSS('object-fit', 'cover');
+    await expect(page.locator('.hero-actions .button')).toBeInViewport();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
   });
 }

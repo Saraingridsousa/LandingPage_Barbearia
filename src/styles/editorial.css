@@ -1,0 +1,59 @@
+/* JR do Corte — warm, modern editorial visual system. */
+:root { --bg: #100e0c; --surface: #1a1714; --surface-raised: #241e19; --text: #f7f0e6; --muted: #c3b9ac; --border: #4a3b2e; --radius: 3px; --section-space: clamp(70px, 9vw, 126px); }
+.header { background: #100e0c; border-bottom-color: #352b22; padding-inline: 0; }
+#nav_list { margin: 0; padding-inline-start: 0; }
+#nav_list a:not(.button) { position: relative; color: #f0e8dd; }
+#nav_list a:not(.button)::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: 8px; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+#nav_list a:not(.button):is(:hover,:focus-visible)::after { transform: scaleX(1); }
+#btn_mobile { border-color: var(--border); }
+h2, .footer-title { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -.045em; }
+h2 { font-size: clamp(2.5rem, 5vw, 4.6rem); line-height: 1.04; }
+.eyebrow { letter-spacing: .19em; }
+.button { border-radius: 3px; padding-inline: clamp(16px, 2vw, 27px); }
+#serviços { background: radial-gradient(ellipse at 90% 0%, #2a2118, transparent 50%), var(--surface); }
+.section-heading { margin-bottom: clamp(36px, 5vw, 62px); }
+.section-heading h2 { max-width: 17ch; }
+.section-heading > p { line-height: 1.85; }
+.servicos-grid { gap: 36px; }
+.service-group { padding: 0; border: 0; background: none; }
+.service-group-title { padding: 0 0 15px; border-bottom: 1px solid #8a6737; color: var(--gold-light); }
+.service-card { position: relative; grid-template-columns: 70px minmax(0,1fr); align-items: center; padding: 21px 12px; gap: 18px; margin-top: 12px; border: 1px solid var(--border); border-radius: var(--radius); background: linear-gradient(135deg,#241e19,#181512); }
+.service-card:last-child { border-bottom: 1px solid var(--border); }
+.service-visual { padding: 10px; background: linear-gradient(145deg,#efc17b,#b87c30); border: 1px solid #e2b66e; overflow: hidden; }
+.service-body h4 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: -.025em; margin: 0; }
+.service-body p { line-height: 1.65; margin-block: 6px 0; }
+.service-card .text-link { padding-block: 5px; gap: 8px; }
+.services-booking { margin-top: 42px; padding: 25px; border: 1px solid var(--border); background: #15120f; }
+.about-grid { gap: clamp(34px,7vw,100px); }
+.about-photo { position: relative; isolation: isolate; max-width: 480px; }
+.about-photo::before { content: ''; position: absolute; z-index: -1; inset: 14px -10px 40px 14px; border: 1px solid #a98047; }
+.about-photo picture { overflow: hidden; }
+.about-photo img { aspect-ratio: 4/5; object-fit: cover; object-position: 50% 35%; filter: sepia(.10) saturate(.87); }
+.about-photo figcaption { color: var(--text); letter-spacing: .08em; }
+.about-copy > p:not(.eyebrow) { line-height: 1.85; max-width: 59ch; }
+#depoimentos { background: #1a1714; }
+.testimonial-layout > div:nth-child(2) { padding: clamp(22px,4vw,44px); background: #100e0c; border-left: 2px solid var(--gold); }
+#localizacao { background: radial-gradient(ellipse at 10% 100%,#21190f,transparent 55%), var(--bg); }
+.mapBox { border: 1px solid #786040; box-shadow: 12px 12px 0 #211b15; }
+.contact-section { position: relative; overflow: hidden; background: radial-gradient(ellipse at 95% 15%, #392818, transparent 65%), #1b1611; border-block-color: #76552d; }
+.contact-layout { position: relative; }
+.contact-layout h2 { color: var(--gold-light); }
+.site-footer { background: #100e0c; }
+@media (min-width: 768px) {
+  .service-card { grid-template-columns: 84px minmax(0,1fr); padding: 22px 18px; }
+  .about-photo::before { inset: 18px -16px 38px 18px; }
+}
+@media (min-width: 1024px) {
+  .service-card { grid-template-columns: 100px minmax(0,1fr); padding: 24px; }
+  .servicos-grid { gap: 26px; }
+}
+@media (max-width: 374px) { .service-card { grid-template-columns: 56px minmax(0,1fr); gap: 12px; padding-inline: 10px; } .services-booking { padding: 16px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .service-card { transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease; }
+  .service-visual img, .about-photo img { transition: transform .55s cubic-bezier(.2,.65,.25,1); }
+  .service-card:is(:hover,:focus-within) { border-color: #c99b58; box-shadow: 0 12px 34px rgb(0 0 0 / .20); }
+  .service-card:is(:hover,:focus-within) .service-visual img { transform: scale(1.08); }
+  .about-photo:hover img { transform: scale(1.035); }
+  .reveal-in { animation: editorial-reveal .65s cubic-bezier(.2,.65,.25,1) both; }
+  @keyframes editorial-reveal { from { opacity: .72; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+}
